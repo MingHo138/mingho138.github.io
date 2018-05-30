@@ -1,0 +1,15 @@
+- var n = 0
+
+//- data contains person and jobList
+include data.pug
+//- include https://raw.githubusercontent.com/MingHo138/helloworld/master/data.pug
+
+html
+    body
+        .container
+            h1 Hello #{person.name}
+            while n <= 3
+                p This is content block #{n++}
+            h3 This is on-going edit
+            each job in jobList
+                .job-card #{job.title}, #{job.company}
