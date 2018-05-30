@@ -1,8 +1,54 @@
 html
     head
         link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        style.
+            #map {
+                height: 100vh;
+                width: 100vw; 
+                z-index: 1;
+            }
+            #content {
+                z-index: 2;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                background: white;
+            }
+        title Hong Kong Map
     body
-        .container.mt-3
-            h1 Google map with layer
-            iframe(width='600', height='450', frameborder='0', style='border:0', src='https://www.google.com/maps/embed/v1/place?key=AIzaSyAbRMuhvLGj4H6UG-sZvBVPhJla1_Mg-nc
-    &q=Space+Needle,Seattle+WA', allowfullscreen='')
+        #content
+            .container.pt-3.pb-3
+                h1 Hong Kong Map
+        #map
+        script.
+            // Initialize and add the map
+            function initMap() {
+                // The location of hk
+                var hk = {lat: 22.366, lng: 114.148};
+                var repulse_bay = {lat: 22.2371725, lng: 114.1962558}
+                var beaches = [
+                    {'name': 'repulse bay', 'lat': 22.2371725, 'lng': 114.1962558},
+                    {'name': 'lower cheung sha beach', 'lat': 22.2338878, 'lng': 113.9557019},
+                    {'name': 'sha ha beach', 'lat': 22.3884422, 'lng': 114.2761467}
+                ]
+                // The map, centered at hk
+                var map = new google.maps.Map(
+                document.getElementById('map'), {zoom: 11.5, center: hk});
+                // The marker, positioned at hk
+                //- var marker = new google.maps.Marker({position: hk, map: map});
+
+                //- Add marker to all beaches
+                beaches.forEach( (beach) => {
+                    var marker = new google.maps.Marker({
+                        position: {lat: beach.lat, lng: beach.lng}, 
+                        map:map,
+                        title: beach.name
+                    })
+                })
+            }
+
+        //- google map api call
+        script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAbRMuhvLGj4H6UG-sZvBVPhJla1_Mg-nc&callback=initMap')
+
