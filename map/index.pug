@@ -18,7 +18,7 @@ html
             }
         title Hong Kong Map
     body
-        #content
+        //- #content
             .container.pt-3.pb-3
                 h1 Hong Kong Map
         #map
@@ -27,25 +27,65 @@ html
             function initMap() {
                 // The location of hk
                 var hk = {lat: 22.366, lng: 114.148};
-                var repulse_bay = {lat: 22.2371725, lng: 114.1962558}
                 var beaches = [
-                    {'name': 'repulse bay', 'lat': 22.2371725, 'lng': 114.1962558},
-                    {'name': 'lower cheung sha beach', 'lat': 22.2338878, 'lng': 113.9557019},
-                    {'name': 'sha ha beach', 'lat': 22.3884422, 'lng': 114.2761467}
+                    {
+                        "name": "大浪灣",
+                        "area": "南區",
+                        "lat": 22.2453604,
+                        "lng": 114.2501946
+                    },
+                    {
+                        "name": "舂坎角",
+                        "area": "南區",
+                        "lat": 22.2180362,
+                        "lng": 114.2020656
+                    },
+                    {
+                        "name": "深水灣",
+                        "area": "南區",
+                        "lat": 22.245142,
+                        "lng": 114.187089
+                    },
+                    {
+                        "name": "夏萍灣",
+                        "area": "南區",
+                        "lat": 22.2240233,
+                        "lng": 114.214881
+                    },
+                    {
+                        "name": "中灣",
+                        "area": "南區",
+                        "lat": 22.2297387,
+                        "lng": 114.1980435
+                    }
                 ]
                 // The map, centered at hk
                 var map = new google.maps.Map(
                 document.getElementById('map'), {zoom: 11.5, center: hk});
                 // The marker, positioned at hk
-                //- var marker = new google.maps.Marker({position: hk, map: map});
+                var marker_hk = new google.maps.Marker({position: hk, map: map, title: 'HK!'});
+
+                // Info window
+                var contentString = '<div><h3>Hello!</h3>This is a content block.</div>'
+                var infowindow = new google.maps.InfoWindow({
+                    content: contentString
+                })
+                marker_hk.addListener('click', () => { infowindow.open(map, marker_hk) })
 
                 //- Add marker to all beaches
-                beaches.forEach( (beach) => {
+                beaches.forEach( beach => {
+                    console.log()
                     var marker = new google.maps.Marker({
                         position: {lat: beach.lat, lng: beach.lng}, 
                         map:map,
                         title: beach.name
                     })
+                    var contentString = '<h4>' + beach.name + '</h4>' +
+                        '<button>Click Me</button>'
+                    var infowindow = new google.maps.InfoWindow({
+                        content: contentString
+                    })
+                    marker.addListener('click', () => { infowindow.open(map, marker) })
                 })
             }
 
