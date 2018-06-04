@@ -30,7 +30,7 @@ mixin topNav
       a.ml-4.text-primary= item
 
 mixin jobadmodal(jobad)
-  .modal.bd-example-modal-lg(id=jobad.Id tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+  .modal.fade.bd-example-modal-lg(id=jobad.Id tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
     .modal-dialog.modal-lg(role='document')
       .modal-content
         .modal-header
@@ -42,11 +42,24 @@ mixin jobadmodal(jobad)
         .modal-body
           .card.mb-3
             .card-body
-              if jobad.CompanyLogo
-                img(src=jobad.CompanyLogo)
-              h3 !{jobad.JobTitle}
-              div !{jobad.Company}
-            .card-footer footer
+              .row
+                if jobad.CompanyLogo
+                  .col-2.text-center
+                    img.mb-2(src=jobad.CompanyLogo)
+                .col
+                  h3 !{jobad.JobTitle}
+                  div !{jobad.Company}
+            .card-footer
+              .row
+                .col
+                  i.fas.fa-dollar-sign
+                  span.ml-2 !{jobad.Salary}
+                .col 
+                  i.fas.fa-map-marker
+                  span.ml-2 !{jobad.Location}
+                .col 
+                  i.fas.fa-calendar-alt
+                  span.ml-2 !{jobad.PostDate}
           .row
             .col-6
               .card
