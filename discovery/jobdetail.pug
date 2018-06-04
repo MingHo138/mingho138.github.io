@@ -1,0 +1,32 @@
+include data/jobdetail.pug
+include component/header.pug
+
+mixin jobdetail(jobdetail)
+  .container.mt-3
+    if jobdetail.AdBanner
+      img(src=jobdetail.AdBanner)
+    h3 !{jobdetail.JobTitle}
+    h5 !{jobdetail.Company}
+      img(src=jobdetail.CompanyLogo)
+    .card.mb-3
+      .card-body
+        ul.mb-0
+          li #{jobdetail.Salary}
+          li #{jobdetail.Location}
+          li #{jobdetail.PostDate}
+      .card-footer
+        button.btn.btn-secondary Save
+        button.btn.btn-primary.ml-3 Apply
+    .card.mb-3
+      .card-header Job Description
+      .card-body
+        p !{jobdetail.JobDesc}
+    .card
+      .card-header Company Description
+      .card-body
+        p !{jobdetail.CompanyDesc}
+
+html
+  +header()
+  body
+    +jobdetail(jobdetail[0])

@@ -1,0 +1,28 @@
+$bg-brand: #0E2956;
+$bg-grey: #EEEEEE;
+$grey-border: #ccc;
+$hover-bg: #e3eff4;
+
+.bg-input {
+  background: $bg-brand;
+}
+.joblisting {
+  background: $bg-grey;
+  margin-top: -15px;
+}
+.list-card {
+  background: white;
+  position: relative;
+  &:hover {
+    background: $hover-bg;
+    cursor: pointer;
+  }
+}
+.logo {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+.modal-lg {
+  max-width: 85vw;
+}

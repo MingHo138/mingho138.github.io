@@ -1,0 +1,21 @@
+.bg-input {
+  background: #0E2956; }
+
+.joblisting {
+  background: #EEEEEE;
+  margin-top: -15px; }
+
+.list-card {
+  background: white;
+  position: relative; }
+  .list-card:hover {
+    background: #e3eff4;
+    cursor: pointer; }
+
+.logo {
+  position: absolute;
+  right: 30px;
+  bottom: 30px; }
+
+.modal-lg {
+  max-width: 85vw; }
