@@ -1,14 +1,18 @@
 include data/data.pug
 include component/header.pug
 
+mixin linkitem(name, link)
+  li
+    a(href=link) !{name}
+
 html
   +header()
   body
     .container.mt-3.mb-3
       h1 One discovery flow
-      .mt-2
-        a.btn.btn-block.btn-secondary(href="homepage.html") Homepage
-      .mt-2
-        a.btn.btn-block.btn-secondary(href="srp.html") Search result page
-      .mt-2
-        a.btn.btn-block.btn-secondary(href="jobdetail.html") Job detail page
+      ul
+        +linkitem('Homepage', 'homepage.html')
+        +linkitem('Search result page (overlay)', 'srp.html')
+        +linkitem('Search result page (new tab)', 'srp-newtab.html')
+        +linkitem('Job detail age', 'jobdetail.html')        
+      
