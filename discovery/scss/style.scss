@@ -1,6 +1,7 @@
 $bg-brand: #0E2956;
 $bg-grey: #EEEEEE;
 $grey-border: #ccc;
+$grey-bg: #eee;
 $hover-bg: #e3eff4;
 
 .bg-input {
@@ -33,4 +34,7 @@ $hover-bg: #e3eff4;
     text-decoration: none;
     color: black;
   }
+}
+.bg-grey {
+  background: $grey-bg;
 }
