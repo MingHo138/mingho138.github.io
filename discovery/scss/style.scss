@@ -3,6 +3,7 @@ $bg-grey: #EEEEEE;
 $grey-border: #ccc;
 $grey-bg: #eee;
 $hover-bg: #e3eff4;
+$brand-cta: #FF8700;
 
 .bg-input {
   background: $bg-brand;
@@ -37,4 +38,22 @@ $hover-bg: #e3eff4;
 }
 .bg-grey {
   background: $grey-bg;
+}
+.preview-action-bar {
+  position: sticky; 
+  left: 0; 
+  right: 0; 
+  top: 0; 
+  z-index: 10; 
+  border-bottom: $grey-border 1px solid;
+  padding: 10px 20px;
+  background: white;
+}
+.btn-primary {
+  background: $brand-cta;
+  border-color: $brand-cta;
+  &:hover {
+    background: darken($brand-cta, 10%);
+    border-color: darken($brand-cta, 10%);
+  }
 }
