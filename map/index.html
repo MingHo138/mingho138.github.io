@@ -17,6 +17,9 @@
           right: 0;
           background: white;
       }
+      .info_beach_thumbnail {
+          max-width: 300px;
+      }
     </style>
     <title>Hong Kong Map</title>
   </head>
@@ -27,31 +30,22 @@
       function initMap() {
           // The location of hk
           var hk = {lat: 22.366, lng: 114.148};
-          var beaches = [{"name":"大浪灣","area":"南區","lat":22.2462572,"lng":114.247356},{"name":"舂坎角","area":"南區","lat":22.2180362,"lng":114.2020656},{"name":"深水灣","area":"南區","lat":22.245142,"lng":114.187089},{"name":"夏萍灣","area":"南區","lat":22.2240233,"lng":114.214881},{"name":"中灣","area":"南區","lat":22.2297387,"lng":114.1980435},{"name":"淺水灣","area":"南區","lat":22.2371719,"lng":114.1962551},{"name":"石澳後灘","area":"南區","lat":22.2317123,"lng":114.2517631},{"name":"石澳","area":"南區","lat":22.2289756,"lng":114.2511231},{"name":"南灣","area":"南區","lat":22.2249804,"lng":114.1975326},{"name":"聖士提反灣","area":"南區","lat":22.2118455,"lng":114.2146541},{"name":"赤柱正灘","area":"南區","lat":22.2213852,"lng":114.2137765},{"name":"龜背灣","area":"南區","lat":22.2328811,"lng":114.2233032},{"name":"清水灣第一灣","area":"西貢區","lat":22.2911156,"lng":114.2909638},{"name":"清水灣第二灣","area":"西貢區","lat":22.2881974,"lng":114.287528},{"name":"廈門灣","area":"西貢區","lat":22.356364,"lng":114.295792},{"name":"銀線灣","area":"西貢區","lat":22.322718,"lng":114.271702},{"name":"三星灣","area":"西貢區","lat":22.358043,"lng":114.268228},{"name":"橋咀","area":"西貢區","lat":22.3682867,"lng":114.2888481},{"name":"長洲東灣","area":"離島區","lat":22.209064,"lng":114.0308969},{"name":"愉景灣","area":"離島區","lat":22.298169,"lng":114.0151497},{"name":"洪聖爺灣","area":"離島區","lat":22.2186533,"lng":114.1198032},{"name":"觀音灣","area":"離島區","lat":22.2069132,"lng":114.0345065},{"name":"蘆鬚城","area":"離島區","lat":22.2044202,"lng":114.1227083},{"name":"下長沙","area":"離島區","lat":22.2338878,"lng":113.9557022},{"name":"貝澳","area":"離島區","lat":22.2397114,"lng":113.9768132},{"name":"銀礦灣","area":"離島區","lat":22.2694013,"lng":113.9987171},{"name":"塘福","area":"離島區","lat":22.2278569,"lng":113.9347808},{"name":"上長沙","area":"離島區","lat":22.2330294,"lng":113.9474232},{"name":"龍尾","area":"大埔區","lat":22.4719991,"lng":114.2297083},{"name":"釣魚灣","area":"荃灣區","lat":22.364875,"lng":114.055926},{"name":"近水灣","area":"荃灣區","lat":22.367405,"lng":114.0864385},{"name":"更生灣","area":"荃灣區","lat":22.3675876,"lng":114.074909},{"name":"雙仙灣","area":"荃灣區","lat":22.3639645,"lng":114.0692171},{"name":"海美灣","area":"荃灣區","lat":22.3648349,"lng":114.0710532},{"name":"麗都灣","area":"荃灣區","lat":22.3678339,"lng":114.0761168},{"name":"馬灣東灣","area":"荃灣區","lat":22.3495941,"lng":114.0617157},{"name":"汀九灣","area":"荃灣區","lat":22.3692367,"lng":114.0804619},{"name":"蝴蝶灣","area":"屯門區","lat":22.373411,"lng":113.959308},{"name":"新咖啡灣","area":"屯門區","lat":22.3735478,"lng":113.9867553},{"name":"舊咖啡灣","area":"屯門區","lat":22.3750162,"lng":113.984594},{"name":"青山灣","area":"屯門區","lat":22.379623,"lng":113.979415},{"name":"黃金泳灘","area":"屯門區","lat":22.372362,"lng":113.9879474},{"name":"加多利灣","area":"屯門區","lat":22.3765821,"lng":113.981419}]
+          var beaches = [{"key":"","name":"大浪灣","area":"南區","lat":22.2462572,"lng":114.247356,"quality":1,"photo":"http://www.beachwq.gov.hk/UpFile/20108201648441.jpg"},{"key":"","name":"舂坎角","area":"南區","lat":22.2180362,"lng":114.2020656,"quality":1,"photo":"http://www.beachwq.gov.hk/UpFile/20109141224213.jpg"},{"key":"","name":"深水灣","area":"南區","lat":22.245142,"lng":114.187089,"quality":1,"photo":"http://www.beachwq.gov.hk/UpFile/20109141516807.jpg"},{"key":"","name":"夏萍灣","area":"南區","lat":22.2240233,"lng":114.214881,"quality":"","photo":""},{"key":"","name":"中灣","area":"南區","lat":22.2297387,"lng":114.1980435,"quality":1,"photo":"http://www.beachwq.gov.hk/UpFile/20109141412309.jpg"},{"key":"repulse-bay","name":"淺水灣","area":"南區","lat":22.2371719,"lng":114.1962551,"quality":1,"photo":"http://www.beachwq.gov.hk/UpFile/2010914141790.jpg"},{"key":"","name":"石澳後灘","area":"南區","lat":22.2317123,"lng":114.2517631,"quality":"","photo":""},{"key":"","name":"石澳","area":"南區","lat":22.2289756,"lng":114.2511231,"quality":"","photo":""},{"key":"","name":"南灣","area":"南區","lat":22.2249804,"lng":114.1975326,"quality":1,"photo":"http://www.beachwq.gov.hk/UpFile/2010914124370.jpg"},{"key":"","name":"聖士提反灣","area":"南區","lat":22.2118455,"lng":114.2146541,"quality":"","photo":""},{"key":"","name":"赤柱正灘","area":"南區","lat":22.2213852,"lng":114.2137765,"quality":"","photo":""},{"key":"","name":"龜背灣","area":"南區","lat":22.2328811,"lng":114.2233032,"quality":"","photo":""},{"key":"","name":"清水灣第一灣","area":"西貢區","lat":22.2911156,"lng":114.2909638,"quality":"","photo":""},{"key":"","name":"清水灣第二灣","area":"西貢區","lat":22.2881974,"lng":114.287528,"quality":"","photo":""},{"key":"","name":"廈門灣","area":"西貢區","lat":22.356364,"lng":114.295792,"quality":"","photo":""},{"key":"","name":"銀線灣","area":"西貢區","lat":22.322718,"lng":114.271702,"quality":"","photo":""},{"key":"","name":"三星灣","area":"西貢區","lat":22.358043,"lng":114.268228,"quality":"","photo":""},{"key":"","name":"橋咀","area":"西貢區","lat":22.3682867,"lng":114.2888481,"quality":"","photo":""},{"key":"","name":"長洲東灣","area":"離島區","lat":22.209064,"lng":114.0308969,"quality":"","photo":""},{"key":"","name":"愉景灣","area":"離島區","lat":22.298169,"lng":114.0151497,"quality":"","photo":""},{"key":"","name":"洪聖爺灣","area":"離島區","lat":22.2186533,"lng":114.1198032,"quality":"","photo":""},{"key":"","name":"觀音灣","area":"離島區","lat":22.2069132,"lng":114.0345065,"quality":"","photo":""},{"key":"","name":"蘆鬚城","area":"離島區","lat":22.2044202,"lng":114.1227083,"quality":"","photo":""},{"key":"","name":"下長沙","area":"離島區","lat":22.2338878,"lng":113.9557022,"quality":"","photo":""},{"key":"","name":"貝澳","area":"離島區","lat":22.2397114,"lng":113.9768132,"quality":"","photo":""},{"key":"","name":"銀礦灣","area":"離島區","lat":22.2694013,"lng":113.9987171,"quality":"","photo":""},{"key":"","name":"塘福","area":"離島區","lat":22.2278569,"lng":113.9347808,"quality":"","photo":""},{"key":"","name":"上長沙","area":"離島區","lat":22.2330294,"lng":113.9474232,"quality":"","photo":""},{"key":"","name":"龍尾","area":"大埔區","lat":22.4719991,"lng":114.2297083,"quality":"","photo":""},{"key":"","name":"釣魚灣","area":"荃灣區","lat":22.364875,"lng":114.055926,"quality":"","photo":""},{"key":"","name":"近水灣","area":"荃灣區","lat":22.367405,"lng":114.0864385,"quality":"","photo":""},{"key":"","name":"更生灣","area":"荃灣區","lat":22.3675876,"lng":114.074909,"quality":"","photo":""},{"key":"","name":"雙仙灣","area":"荃灣區","lat":22.3639645,"lng":114.0692171,"quality":"","photo":""},{"key":"","name":"海美灣","area":"荃灣區","lat":22.3648349,"lng":114.0710532,"quality":"","photo":""},{"key":"","name":"麗都灣","area":"荃灣區","lat":22.3678339,"lng":114.0761168,"quality":"","photo":""},{"key":"","name":"馬灣東灣","area":"荃灣區","lat":22.3495941,"lng":114.0617157,"quality":"","photo":""},{"key":"","name":"汀九灣","area":"荃灣區","lat":22.3692367,"lng":114.0804619,"quality":"","photo":""},{"key":"","name":"蝴蝶灣","area":"屯門區","lat":22.373411,"lng":113.959308,"quality":"","photo":""},{"key":"","name":"新咖啡灣","area":"屯門區","lat":22.3735478,"lng":113.9867553,"quality":"","photo":""},{"key":"","name":"舊咖啡灣","area":"屯門區","lat":22.3750162,"lng":113.984594,"quality":"","photo":""},{"key":"","name":"青山灣","area":"屯門區","lat":22.379623,"lng":113.979415,"quality":"","photo":""},{"key":"","name":"黃金泳灘","area":"屯門區","lat":22.372362,"lng":113.9879474,"quality":"","photo":""},{"key":"","name":"加多利灣","area":"屯門區","lat":22.3765821,"lng":113.981419,"quality":"","photo":""}]
           // The map, centered at hk
           var map = new google.maps.Map(
           document.getElementById('map'), {zoom: 11.5, center: hk});
-          // The marker, positioned at hk
-        //   var marker_hk = new google.maps.Marker({position: hk, map: map, title: 'HK!'});
-      
-          // Info window
-        //   var contentString = '<div><h3>Hello!</h3>This is a content block.</div>'
-        //   var infowindow = new google.maps.InfoWindow({
-        //       content: contentString
-        //   })
-        //   marker_hk.addListener('click', () => { infowindow.open(map, marker_hk) })
-      
+
           //- Add marker to all beaches
           beaches.forEach( beach => {
-              console.log()
+            //   console.log()
               var marker = new google.maps.Marker({
                   position: {lat: beach.lat, lng: beach.lng}, 
                   map:map,
                   title: beach.name
               })
               var contentString = '<h4>' + beach.name + '</h4>' +
-                  '<a href="#" class="btn btn-block btn-primary">沙灘資訊</a>' +
-                  '<img class="mt-2" style="max-width:200px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Repulse_Bay_201501.jpg/1200px-Repulse_Bay_201501.jpg">'
+                  '<img class="info_beach_thumbnail mb-2" src="' + beach.photo + '"/>' +
+                  '<a href="beach/' + beach.key + '.html" class="btn btn-block btn-primary">海灘資料</a>'
               var infowindow = new google.maps.InfoWindow({
                   content: contentString
               })
