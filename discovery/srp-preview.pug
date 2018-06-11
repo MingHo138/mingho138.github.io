@@ -80,39 +80,43 @@ mixin preview(jobad)
           .col !{jobad.Salary}
           .col Expires in !{expireDate} days
           .col !{postTime} mins ago
-    //- job description
-    .card.mb-3
-      .card-header Job Description
-      .card-body !{jobad.JobDesc}
-    //- job requirement
-    .card.mb-3
-      .card-header Job Requirement
-      .card-body
-        .row
-          .col
-            +reqList('Job Posted & Closing Date', jobad.PostDate + ' to ' + jobad.UnavailableAfter.substring(0,9) )
-            +reqList('Career Level', jobad.CareerLevel)
-            +reqList('Qualification', jobad.Qualification)
-            +reqList('JobFunction', jobad.JobFunction)
-          .col
-            +reqList('Industry', jobad.Industry)
-            +reqList('Years of Experience', jobad.WorkExperience)
-            +reqList('Employment Type', jobad.EmploymentTerm)
-            +reqList('Benefits', jobad.BenefitId)
-    //- company overview
-    if jobad.CompanyDesc
-      .card.mb-3
-        .card-header Company Overview
-        .card-body !{jobad.CompanyDesc}
+    .row
+      .col-xl-8
+        //- job description
+        .card.mb-3
+          .card-header Job Description
+          .card-body !{jobad.JobDesc}
+        
+        //- company overview
+        if jobad.CompanyDesc
+          .card.mb-3
+            .card-header Company Overview
+            .card-body !{jobad.CompanyDesc}
 
-    //- we offer you
-    .card.mb-3
-      .card-header We Offer You
-      .card-body
-        ul
-          li= jobad.Summary1
-          li= jobad.Summary2
-          li= jobad.Summary3
+        //- we offer you
+        .card.mb-3
+          .card-header We Offer You
+          .card-body
+            ul
+              li= jobad.Summary1
+              li= jobad.Summary2
+              li= jobad.Summary3
+      .col
+        //- job requirement
+        .card.mb-3
+          .card-header Job Requirement
+          .card-body
+            .row
+              .col
+                +reqList('Job Posted & Closing Date', jobad.PostDate + ' to ' + jobad.UnavailableAfter.substring(0,9) )
+                +reqList('Career Level', jobad.CareerLevel)
+                +reqList('Qualification', jobad.Qualification)
+                +reqList('JobFunction', jobad.JobFunction)
+              .col
+                +reqList('Industry', jobad.Industry)
+                +reqList('Years of Experience', jobad.WorkExperience)
+                +reqList('Employment Type', jobad.EmploymentTerm)
+                +reqList('Benefits', jobad.BenefitId)
 
 html
   head
