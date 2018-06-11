@@ -32,6 +32,9 @@
 .bg-grey {
   background: #eee; }
 
+.bg-white {
+  background: white; }
+
 .preview-action-bar {
   position: -webkit-sticky;
   position: sticky;

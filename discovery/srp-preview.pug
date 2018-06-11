@@ -58,7 +58,7 @@ mixin reqList(label, val, icon)
 mixin preview(jobad)
   div.preview-panel(id=jobad.Id style="display: none")
     if jobad.AdBanner
-      .mb-2.text-center
+      .mb-2.text-center.bg-white(style="border: 5px solid #" + jobad.AdBorder)
         img(src=jobad.AdBanner)
     //- key info
     .card.mb-3
