@@ -1,7 +1,13 @@
 const handleClick = (jobadId) => {
     console.log("Click on job ad: ", jobadId)
+
+    // toggle preview panel job ad
     $('.preview-panel').hide();
     $('#' + jobadId).show();
+
+    // toggle active class on job card
+    $('.list-card').removeClass('active');
+    $('#jobcard' + jobadId).addClass('active');
 }
 
 const init = () => {

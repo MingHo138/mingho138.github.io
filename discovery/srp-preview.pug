@@ -6,7 +6,7 @@ include data/jobdetail.pug
 - var postTime = Math.floor(Math.random()*60 + 1)
 
 mixin jobcard(jobad)
-  .border.border-bottom-0.p-3.list-card(data-target="#"+jobad.Id onclick='handleClick(' + jobad.Id + ')')
+  .border.border-bottom-0.p-3.list-card(data-target="#"+jobad.Id id='jobcard' + jobad.Id onclick='handleClick(' + jobad.Id + ')')
     a(href="#") !{jobad.JobTitle}
     div !{jobad.Company}
     ul
@@ -97,9 +97,10 @@ mixin preview(jobad)
             +reqList('Employment Type', jobad.EmploymentTerm)
             +reqList('Benefits', jobad.BenefitId)
     //- company overview
-    .card.mb-3
-      .card-header Company Overview
-      .card-body !{jobad.CompanyDesc}
+    if jobad.CompanyDesc
+      .card.mb-3
+        .card-header Company Overview
+        .card-body !{jobad.CompanyDesc}
 
     //- we offer you
     .card.mb-3

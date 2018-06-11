@@ -11,6 +11,8 @@
   .list-card:hover {
     background: #e3eff4;
     cursor: pointer; }
+  .list-card.active {
+    background: #e3eff4; }
 
 .logo {
   position: absolute;

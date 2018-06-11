@@ -19,6 +19,9 @@ $brand-cta: #FF8700;
     background: $hover-bg;
     cursor: pointer;
   }
+  &.active {
+    background: $hover-bg;
+  }
 }
 .logo {
   position: absolute;
