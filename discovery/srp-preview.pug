@@ -65,58 +65,52 @@ mixin preview(jobad)
       .card-body
         .row
           if jobad.CompanyLogo
-            .col-2
-              img(src=jobad.CompanyLogo)
+            .col-2(style="position:relative; max-width: 150px;")
+              img(src=jobad.CompanyLogo style="position: absolute; top: 25%; left: 20%")
           .col
-            div 
-              .font-weight-bold.text-primary !{jobad.JobTitle}
-            div !{jobad.Company}
-          .col-2
-            button.btn.btn-primary.btn-block Apply
-            button.btn.btn-secondary.btn-block Save
+            h4 !{jobad.JobTitle}
+            div.text-primary !{jobad.Company}
       .card-footer
         .row
-          .col !{jobad.Location}
           .col !{jobad.Salary}
+          .col !{jobad.Location}
           .col Expires in !{expireDate} days
-          .col !{postTime} mins ago
-    .row
-      .col-xl-8
-        //- job description
-        .card.mb-3
-          .card-header Job Description
-          .card-body !{jobad.JobDesc}
-        
-        //- company overview
-        if jobad.CompanyDesc
-          .card.mb-3
-            .card-header Company Overview
-            .card-body !{jobad.CompanyDesc}
 
-        //- we offer you
-        .card.mb-3
-          .card-header We Offer You
-          .card-body
-            ul
-              li= jobad.Summary1
-              li= jobad.Summary2
-              li= jobad.Summary3
-      .col
-        //- job requirement
-        .card.mb-3
-          .card-header Job Requirement
-          .card-body
-            .row
-              .col
-                +reqList('Job Posted & Closing Date', jobad.PostDate + ' to ' + jobad.UnavailableAfter.substring(0,9) )
-                +reqList('Career Level', jobad.CareerLevel)
-                +reqList('Qualification', jobad.Qualification)
-                +reqList('JobFunction', jobad.JobFunction)
-              .col
-                +reqList('Industry', jobad.Industry)
-                +reqList('Years of Experience', jobad.WorkExperience)
-                +reqList('Employment Type', jobad.EmploymentTerm)
-                +reqList('Benefits', jobad.BenefitId)
+
+    //- job description
+    .card.mb-3
+      .card-header Job Description
+      .card-body !{jobad.JobDesc}
+    //- job requirement
+    .card.mb-3
+      .card-header Job Requirement
+      .card-body
+        .row
+          .col
+            +reqList('Job Posted & Closing Date', jobad.PostDate + ' to ' + jobad.UnavailableAfter.substring(0,9) )
+            +reqList('Career Level', jobad.CareerLevel)
+            +reqList('Qualification', jobad.Qualification)
+            +reqList('JobFunction', jobad.JobFunction)
+          .col
+            +reqList('Industry', jobad.Industry)
+            +reqList('Years of Experience', jobad.WorkExperience)
+            +reqList('Employment Type', jobad.EmploymentTerm)
+            +reqList('Benefits', jobad.BenefitId)
+    
+    //- company overview
+    if jobad.CompanyDesc
+      .card.mb-3
+        .card-header Company Overview
+        .card-body !{jobad.CompanyDesc}
+
+    //- we offer you
+    .card.mb-3
+      .card-header We Offer You
+      .card-body
+        ul
+          li= jobad.Summary1
+          li= jobad.Summary2
+          li= jobad.Summary3
 
 html
   head
