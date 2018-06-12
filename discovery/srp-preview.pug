@@ -59,7 +59,7 @@ mixin preview(jobad)
   div.preview-panel(id=jobad.Id style="display: none")
     if jobad.AdBanner
       .mb-2.text-center.bg-white(style="border: 5px solid #" + jobad.AdBorder)
-        img(src=jobad.AdBanner)
+        img(src=jobad.AdBanner style="width: 100%")
     //- key info
     .card.mb-3
       .card-body
