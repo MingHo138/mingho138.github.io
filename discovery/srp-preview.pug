@@ -53,7 +53,44 @@ mixin searchInput
 mixin reqList(label, val, icon)
   .mb-2
     small !{label}
-    div !{val}
+    if label === 'Benefits'
+      +benefit(val)
+    else 
+      div !{val}
+
+mixin benefit(benefits)
+  //- .bg-info !{benefits}
+  each benefit in benefits
+    if benefit === 1
+      div Five day work week
+    if benefit === 2
+      div Flexible working hours
+    if benefit === 3
+      div Work from home
+    if benefit === 4
+      div Medical insurance
+    if benefit === 5
+      div Dental insurance
+    if benefit === 6
+      div Life insurnce
+    if benefit === 7
+      div Double pay
+    if benefit === 8
+      div Performance bonus
+    if benefit === 9
+      div Gratuity
+    if benefit === 10
+      div Overtime pay
+    if benefit === 11
+      div Educational allowance
+    if benefit === 12
+      div Housing allowance
+    if benefit === 13
+      div Travel allowance
+    if benefit === 14
+      div Free shuttle bus
+    if benefit === 15
+      div Transportational allowance
 
 mixin preview(jobad)
   div.preview-panel(id=jobad.Id style="display: none;")
