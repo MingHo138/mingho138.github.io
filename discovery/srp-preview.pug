@@ -55,6 +55,9 @@ mixin reqList(label, val, icon)
     small !{label}
     if label === 'Benefits'
       +benefit(val)
+    if label === 'JobFunction'
+      each item in val
+        div !{item}
     else 
       div !{val}
 
