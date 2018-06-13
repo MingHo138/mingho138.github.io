@@ -1,0 +1,145 @@
+include component/header.pug
+include component/jobdetail.pug
+include data/jobdetail.pug
+
+- var expireDate = Math.floor(Math.random()*30 + 1)
+- var postTime = Math.floor(Math.random()*60 + 1)
+
+mixin jobcard(jobad)
+  .border.border-bottom-0.p-3.list-card(data-target="#"+jobad.Id id='jobcard' + jobad.Id onclick='handleClick(' + jobad.Id + ')')
+    a(href="#") !{jobad.JobTitle}
+    div !{jobad.Company}
+    ul
+      li= jobad.Summary1
+      li= jobad.Summary2
+      li= jobad.Summary3
+    div= jobad.Location
+    if jobad.SalaryVisible == 'Hidden'
+      div Salary negotiable
+    div !{jobad.PostDate}
+    if jobad.CompanyLogo
+      img.logo(src=jobad.CompanyLogo)
+
+mixin reqList(header, content)
+  li.mb-3
+    div
+      small= header
+    div !{content}
+
+mixin topNav
+  .container.pt-3.pb-3
+    img(src="https://content.jobsdbcdn.com/Content/d0521/images/Shared/v8Revamp2/jobsdb_logo_general_2015.png")
+    each item in ['Home', 'MyJobsDB', 'Resources', 'Career Insights']
+      a.ml-4.text-primary= item
+
+mixin searchInput
+  .search-input.bg-input.p-3
+    .row
+      .col
+        input.form-control(placeholder="Search job")
+      .col
+        select.form-control
+          option All job functions
+      .col
+        select.form-control
+          option All locations
+      .col
+        button.btn.btn-primary.btn-block Search
+    //- .mt-2
+      span.text-white Filters
+      each filter in ['Salary', 'Job type', 'Career level']
+        button.btn.btn-secondary.ml-2= filter
+
+mixin reqList(label, val, icon)
+  .mb-2
+    small !{label}
+    div !{val}
+
+mixin preview(jobad)
+  div.preview-panel(id=jobad.Id style="display: none; max-width: 1000px; margin: 0 auto")
+    if jobad.AdBanner
+      .mb-2.text-center.bg-white(style="border: 5px solid #" + jobad.AdBorder)
+        img(src=jobad.AdBanner style="width: 100%")
+    .card.mb-3
+      .card-body
+        .row
+          if jobad.CompanyLogo
+            .col-2(style="position:relative; max-width: 150px;")
+              img(src=jobad.CompanyLogo style="position: absolute; top: 25%; left: 20%")
+          .col
+            h4 !{jobad.JobTitle}
+            div.text-primary !{jobad.Company}
+      .card-footer
+        .row
+          .col !{jobad.Salary}
+          .col !{jobad.Location}
+          .col Expires in !{expireDate} days
+    //- key info
+    .row
+      .col
+        //- job description
+        .card.mb-3
+          .card-header Job Description
+          .card-body !{jobad.JobDesc}
+
+      .col-xl-5
+        //- job requirement
+        .card.mb-3
+          .card-header Job Requirement
+          .card-body
+            .row
+              .col
+                +reqList('Job Posted & Closing Date', jobad.PostDate + ' to ' + jobad.UnavailableAfter.substring(0,9) )
+                +reqList('Career Level', jobad.CareerLevel)
+                +reqList('Qualification', jobad.Qualification)
+                +reqList('JobFunction', jobad.JobFunction)
+              .col
+                +reqList('Industry', jobad.Industry)
+                +reqList('Years of Experience', jobad.WorkExperience)
+                +reqList('Employment Type', jobad.EmploymentTerm)
+                +reqList('Benefits', jobad.BenefitId)
+        
+        //- company overview
+        if jobad.CompanyDesc
+          .card.mb-3
+            .card-header Company Overview
+            .card-body !{jobad.CompanyDesc}
+
+        //- we offer you
+        //- .card.mb-3
+          .card-header We Offer You
+          .card-body
+            ul
+              li= jobad.Summary1
+              li= jobad.Summary2
+              li= jobad.Summary3
+
+html
+  head
+    +header("Search Result Page")
+  body
+
+    .d-flex.flex-column(style="max-height: 100vh;")
+      +searchInput()
+      .d-flex
+
+        //- job listing
+        .bg-info(style="width:440px; overflow: scroll")
+          .joblisting.pb-5
+            .mt-3
+              .p-2 1-15 of 58584 jobs
+              each jobad in jobdetail
+                +jobcard(jobad)
+
+        //- preview panel
+        div(style="flex:1; overflow: scroll; position: relative")
+          .preview-action-bar
+            .row
+              .col
+                button.btn.btn-primary Apply
+                button.btn.btn-link View in new tab
+              .col.text-right
+                button.btn.btn-link Close
+          .p-3.bg-grey
+            each jobad in jobdetail
+              +preview(jobad)
