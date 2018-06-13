@@ -1,5 +1,5 @@
 const handleClick = (jobadId) => {
-    console.log("Click on job ad: ", jobadId)
+    // console.log("Click on job ad: ", jobadId)
 
     // toggle preview panel job ad
     $('.preview-panel').hide();
@@ -9,12 +9,16 @@ const handleClick = (jobadId) => {
     $('.list-card').removeClass('active');
     $('#jobcard' + jobadId).addClass('active');
 
+    // scroll to top of preview panel
     $('#preview-container').scrollTop(0);
+
+    // change view in new tab link
+    $('#jobad-newtab').prop("href", 'jobad-' + jobadId + '.html')
 }
 
 const init = () => {
-    console.log('init')
-    $('#100003006185288').show();
+    const initAd = '100003006185288';
+    handleClick(initAd);
 }
 
 $(document).ready(function() {
