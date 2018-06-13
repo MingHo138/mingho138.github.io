@@ -9,14 +9,17 @@ mixin jobcard(jobad)
   .border.border-bottom-0.p-3.list-card(data-target="#"+jobad.Id id='jobcard' + jobad.Id onclick='handleClick(' + jobad.Id + ')')
     a(href="#") !{jobad.JobTitle}
     div !{jobad.Company}
-    ul
+    ul.mt-2(style="padding-left: 20px")
       li= jobad.Summary1
       li= jobad.Summary2
       li= jobad.Summary3
-    div= jobad.Location
-    if jobad.SalaryVisible == 'Hidden'
-      div Salary negotiable
-    div !{jobad.PostDate}
+    div
+      i.fa.fa-fw.fa-map-marker-alt.mr-1
+      span !{jobad.Location}
+    div 
+      i.fa.fa-fw.fa-dollar-sign.mr-1
+      span !{jobad.Salary}
+    .mt-2 !{jobad.PostDate}
     if jobad.CompanyLogo
       img.logo(src=jobad.CompanyLogo)
 
@@ -52,14 +55,19 @@ mixin searchInput
 
 mixin reqList(label, val, icon)
   .mb-2
-    small !{label}
-    if label === 'Benefits'
-      +benefit(val)
-    else if label === 'JobFunction'
-      each item in val
-        div !{item}
-    else 
-      div !{val}
+    .row
+      if icon
+        .col(style="max-width: 30px")
+            i(class='fa fa-fw fa-' + icon)
+      .col
+        small !{label}
+        if label === 'Benefits'
+          +benefit(val)
+        else if label === 'JobFunction'
+          each item in val
+            div !{item}
+        else 
+          div !{val}
 
 mixin benefit(benefits)
   //- .bg-info !{benefits}
@@ -111,9 +119,15 @@ mixin preview(jobad)
             div.text-primary !{jobad.Company}
       .card-footer
         .row
-          .col !{jobad.Salary}
-          .col !{jobad.Location}
-          .col Expires in !{expireDate} days
+          .col 
+            i.fa.fa-dollar-sign.fa-fw.mr-1
+            span !{jobad.Salary}
+          .col 
+            i.fa.fa-map-marker-alt.fa-fw.mr-1
+            span !{jobad.Location}
+          .col 
+            i.fa.fa-fw.fa-calendar-alt.mr-1
+            span Expires in !{expireDate} days
     //- key info
     .row
       .col-12
@@ -132,16 +146,16 @@ mixin preview(jobad)
           .card-body
             .row
               .col
-                +reqList('Job Posted & Closing Date', jobad.PostDate + ' to ' + jobad.UnavailableAfter.substring(0,9) )
-                +reqList('Career Level', jobad.CareerLevel)
-                +reqList('Qualification', jobad.Qualification)
-                +reqList('JobFunction', jobad.JobFunction)
+                +reqList('Job Posted & Closing Date', jobad.PostDate + ' to ' + jobad.UnavailableAfter.substring(0,9), 'clock' )
+                +reqList('Career Level', jobad.CareerLevel, 'signal')
+                +reqList('Qualification', jobad.Qualification, 'graduation-cap')
+                +reqList('JobFunction', jobad.JobFunction, 'building')
               .col
-                +reqList('Industry', jobad.Industry)
-                +reqList('Years of Experience', jobad.WorkExperience)
-                +reqList('Employment Type', jobad.EmploymentTerm)
+                +reqList('Industry', jobad.Industry, 'industry')
+                +reqList('Years of Experience', jobad.WorkExperience, 'briefcase')
+                +reqList('Employment Type', jobad.EmploymentTerm, 'handshake')
                 if jobad.BenefitId != ""
-                  +reqList('Benefits', jobad.BenefitId)
+                  +reqList('Benefits', jobad.BenefitId, 'star')
         
         //- company overview
         if jobad.CompanyDesc
