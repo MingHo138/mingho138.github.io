@@ -46,6 +46,10 @@
   padding: 10px 20px;
   background: white; }
 
+.preview-panel {
+  max-width: 1000px;
+  margin: 0 auto; }
+
 .btn-primary {
   background: #FF8700;
   border-color: #FF8700; }

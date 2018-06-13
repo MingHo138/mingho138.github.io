@@ -88,12 +88,12 @@ mixin preview(jobad)
           .card-header Job Requirement
           .card-body
             .row
-              .col
+              .col-12
                 +reqList('Job Posted & Closing Date', jobad.PostDate + ' to ' + jobad.UnavailableAfter.substring(0,9) )
                 +reqList('Career Level', jobad.CareerLevel)
                 +reqList('Qualification', jobad.Qualification)
                 +reqList('JobFunction', jobad.JobFunction)
-              .col
+              .col-12
                 +reqList('Industry', jobad.Industry)
                 +reqList('Years of Experience', jobad.WorkExperience)
                 +reqList('Employment Type', jobad.EmploymentTerm)

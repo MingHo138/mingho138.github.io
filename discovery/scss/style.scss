@@ -55,6 +55,10 @@ $brand-cta: #FF8700;
   padding: 10px 20px;
   background: white;
 }
+.preview-panel {
+  max-width: 1000px; 
+  margin: 0 auto;
+}
 .btn-primary {
   background: $brand-cta;
   border-color: $brand-cta;
