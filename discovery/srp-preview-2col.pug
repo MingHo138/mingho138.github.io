@@ -161,7 +161,10 @@ mixin preview(jobad)
         if jobad.CompanyDesc
           .card.mb-3
             .card-header Company Overview
-            .card-body !{jobad.CompanyDesc}
+            if jobad.CompanyDescTidy
+              .card-body !{jobad.CompanyDescTidy}
+            else
+              .card-body !{jobad.CompanyDesc}
 
         //- we offer you
         //- .card.mb-3
