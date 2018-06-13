@@ -136,7 +136,7 @@ mixin preview(jobad)
                 +reqList('Industry', jobad.Industry)
                 +reqList('Years of Experience', jobad.WorkExperience)
                 +reqList('Employment Type', jobad.EmploymentTerm)
-                if jobad.BenefitId
+                if jobad.BenefitId != ""
                   +reqList('Benefits', jobad.BenefitId)
         
         //- company overview
