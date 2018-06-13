@@ -122,7 +122,10 @@ mixin preview(jobad)
         //- job description
         .card.mb-3
           .card-header Job Description
-          .card-body !{jobad.JobDesc}
+          if jobad.JobDescTidy
+            .card-body !{jobad.JobDescTidy}
+          else
+            .card-body !{jobad.JobDesc}
 
       .col-xl-5
         //- job requirement
