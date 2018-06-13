@@ -8,6 +8,8 @@ const handleClick = (jobadId) => {
     // toggle active class on job card
     $('.list-card').removeClass('active');
     $('#jobcard' + jobadId).addClass('active');
+
+    $('#preview-container').scrollTop(0);
 }
 
 const init = () => {
