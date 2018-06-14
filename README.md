@@ -1,5 +1,5 @@
-# mingho138.github.io
-Prototype playground
+# Prototype playground
+Turning design into interactive prototype, integrate with real data, test with external users, for making better informed design decision.
 
 # Search Result Page
 - [Preview / split mode](https://mingho138.github.io/discovery/html/srp-preview.html)
