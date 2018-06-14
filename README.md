@@ -10,5 +10,8 @@ Turning design into interactive prototype, integrate with real data, test with e
 # Job Detail Page
 - [Job detail page](http://localhost:7880/html/jobdetail.html)
 
+Reference:
+[Job detail page realtime board](https://realtimeboard.com/app/board/o9J_kz1af-U=/)
+
 # Homepage
 - [Homepage](http://localhost:7880/html/homepage.html)
