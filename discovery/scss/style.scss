@@ -4,6 +4,7 @@ $grey-border: #ccc;
 $grey-bg: #eee;
 $hover-bg: #e3eff4;
 $brand-cta: #FF8700;
+$base-grid: 4px;
 
 .bg-input {
   background: $bg-brand;
@@ -15,12 +16,15 @@ $brand-cta: #FF8700;
 .list-card {
   background: white;
   position: relative;
-  &:hover {
+  &.highlight {
     background: $hover-bg;
+  }
+  &:hover {
+    background: darken($hover-bg, 3%);
     cursor: pointer;
   }
   &.active {
-    background: $hover-bg;
+    box-shadow: inset ($base-grid*2) 0px 0px 0px $bg-brand;
   }
 }
 .logo {

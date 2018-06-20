@@ -6,7 +6,7 @@ include data/jobdetail.pug
 - var postTime = Math.floor(Math.random()*60 + 1)
 
 mixin jobcard(jobad)
-  .border.border-bottom-0.p-3.list-card(data-target="#"+jobad.Id id='jobcard' + jobad.Id onclick='handleClick(' + jobad.Id + ')')
+  .border.border-bottom-0.p-3.list-card(class=jobad.AdType == 2 ? 'highlight': '' data-target="#"+jobad.Id id='jobcard' + jobad.Id onclick='handleClick(' + jobad.Id + ')')
     a(href="#") !{jobad.JobTitle}
     div !{jobad.Company}
     ul.mt-2(style="padding-left: 20px")
