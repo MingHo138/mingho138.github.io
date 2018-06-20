@@ -185,12 +185,17 @@ html
       .d-flex
 
         //- job listing
-        .bg-info(style="width:440px; overflow: scroll")
-          .joblisting.pb-5
+        div(style="width:440px; overflow: scroll")
+          .joblisting
             .mt-3
               .p-2 1-15 of 58584 jobs
               each jobad in jobdetail
                 +jobcard(jobad)
+            .text-center.pt-3.pb-3
+              .btn-group
+                button.btn.btn-secondary Prev
+                button.btn.btn-secondary 1
+                button.btn.btn-secondary Next
 
         //- preview panel
         div#preview-container(style="flex:1; overflow: scroll; position: relative")
