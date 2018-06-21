@@ -71,3 +71,11 @@ $base-grid: 4px;
     border-color: darken($brand-cta, 10%);
   }
 }
+
+#joblist-container {
+  width:440px; 
+  overflow: scroll;
+  &.full-width {
+    width: 100%;
+  }
+}

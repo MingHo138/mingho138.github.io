@@ -1,5 +1,6 @@
 include component/header.pug
 include component/jobdetail.pug
+include component/intercom.pug
 include data/jobdetail.pug
 
 - var expireDate = Math.floor(Math.random()*30 + 1)
@@ -209,3 +210,4 @@ html
           .p-3.bg-grey
             each jobad in jobdetail
               +preview(jobad)
+    +intercom()
