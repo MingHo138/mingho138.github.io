@@ -5,7 +5,7 @@ $grey-bg: #eee;
 $hover-bg: #e3eff4;
 $brand-cta: #FF8700;
 $base-grid: 4px;
-
+$highlight-bg: #E0F0FA;
 .bg-input {
   background: $bg-brand;
 }
@@ -17,14 +17,14 @@ $base-grid: 4px;
   background: white;
   position: relative;
   &.highlight {
-    background: $hover-bg;
+    background: $highlight-bg;
   }
   &:hover {
-    background: darken($hover-bg, 3%);
+    background: darken($highlight-bg, 3%);
     cursor: pointer;
   }
   &.active {
-    box-shadow: inset ($base-grid*2) 0px 0px 0px $bg-brand;
+    box-shadow: inset ($base-grid*1) 0px 0px 0px $bg-brand;
   }
 }
 .logo {

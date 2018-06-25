@@ -9,13 +9,13 @@
   background: white;
   position: relative; }
   .list-card.highlight {
-    background: #e3eff4; }
+    background: #E0F0FA; }
   .list-card:hover {
-    background: #d8e9f0;
+    background: #d3eaf8;
     cursor: pointer; }
   .list-card.active {
-    -webkit-box-shadow: inset 8px 0px 0px 0px #0E2956;
-    box-shadow: inset 8px 0px 0px 0px #0E2956; }
+    -webkit-box-shadow: inset 4px 0px 0px 0px #0E2956;
+    box-shadow: inset 4px 0px 0px 0px #0E2956; }
 
 .logo {
   position: absolute;
