@@ -7,15 +7,20 @@
 
 .list-card {
   background: white;
-  position: relative; }
+  position: relative;
+  -webkit-transition: background .3s;
+  -o-transition: background .3s;
+  transition: background .3s; }
   .list-card.highlight {
     background: #E0F0FA; }
   .list-card:hover {
     background: #d3eaf8;
     cursor: pointer; }
   .list-card.active {
-    -webkit-box-shadow: inset 4px 0px 0px 0px #0E2956;
-    box-shadow: inset 4px 0px 0px 0px #0E2956; }
+    background: #496798;
+    color: white; }
+    .list-card.active a {
+      color: white; }
 
 .logo {
   position: absolute;

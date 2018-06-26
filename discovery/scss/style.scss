@@ -3,6 +3,7 @@ $bg-grey: #EEEEEE;
 $grey-border: #ccc;
 $grey-bg: #eee;
 $hover-bg: #e3eff4;
+$active-bg: #496798;
 $brand-cta: #FF8700;
 $base-grid: 4px;
 $highlight-bg: #E0F0FA;
@@ -16,6 +17,7 @@ $highlight-bg: #E0F0FA;
 .list-card {
   background: white;
   position: relative;
+  transition: background .3s;
   &.highlight {
     background: $highlight-bg;
   }
@@ -24,7 +26,10 @@ $highlight-bg: #E0F0FA;
     cursor: pointer;
   }
   &.active {
-    box-shadow: inset ($base-grid*1) 0px 0px 0px $bg-brand;
+    // box-shadow: inset ($base-grid*1) 0px 0px 0px $bg-brand;
+    background: $active-bg;
+    color: white;
+    a { color: white }
   }
 }
 .logo {
