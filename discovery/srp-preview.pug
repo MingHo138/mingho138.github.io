@@ -108,16 +108,18 @@ mixin benefit(benefits)
 mixin preview(jobad)
   div.preview-panel(id=jobad.Id style="display: none;")
     if jobad.AdBanner
+      //- fill white space with blurred version of the image
       .mb-2.text-center.bg-white(style="border: 5px solid #" + jobad.AdBorder)
-        img(src=jobad.AdBanner style="width: 100%")
+        img(src=jobad.AdBanner)
+    //- key info
     .card.mb-3
       .card-body
         .row
-          if jobad.CompanyLogo
-            .col-2(style="position:relative; max-width: 150px;")
-              img(src=jobad.CompanyLogo style="position: absolute; top: 25%; left: 20%")
           .col
             h4 !{jobad.JobTitle}
+          //- if jobad.CompanyLogo
+            .col-2(style="position:relative; max-width: 150px;")
+              img(src=jobad.CompanyLogo style="position: absolute; top: 25%; left: 20%")
             div.text-primary !{jobad.Company}
       .card-footer
         .row
@@ -130,7 +132,6 @@ mixin preview(jobad)
           .col 
             i.fa.fa-fw.fa-calendar-alt.mr-1
             span Expires in !{expireDate} days
-    //- key info
     .row
       .col-12
         //- job description
