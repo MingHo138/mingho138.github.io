@@ -179,6 +179,7 @@ mixin preview(jobad)
 
 html
   head
+    +google-analytics()
     +header("Search Result Page")
   body
 
@@ -212,4 +213,3 @@ html
             each jobad in jobdetail
               +preview(jobad)
     +intercom()
-    +google-analytics()
