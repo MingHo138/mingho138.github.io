@@ -70,3 +70,20 @@
   overflow: scroll; }
   #joblist-container.full-width {
     width: 100%; }
+
+.bg-banner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 4;
+  -webkit-filter: blur(8px);
+  filter: blur(8px);
+  opacity: 0.5; }
+
+.display-banner {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 20%; }
