@@ -11,7 +11,7 @@ include data/jobdetail.pug
 
 //- SRP page starts here
 html
-head
+  head
     +header("Search Result Page")
   body
     .d-flex.flex-column(style="max-height: 100vh;")
@@ -20,9 +20,9 @@ head
         +navigation(navItem)
       //-  search input form
       +searchInput('compact')
-      .d-flex
+      .d-flex.container(style="overflow: hidden;")        
         //- job listing
-        div(style="width:440px; overflow: scroll")
+        div(style="width:400px; overflow: scroll")
           .joblisting
             .mt-3
               .p-2 1-15 of 58584 jobs
@@ -34,7 +34,7 @@ head
                 button.btn.btn-secondary 1
                 button.btn.btn-secondary Next
             //- footer
-            +footer()          
+            +footer()       
 
         //- preview panel
         div#preview-container(style="flex:1; overflow: scroll; position: relative")
