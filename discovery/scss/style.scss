@@ -7,6 +7,14 @@ $active-bg: #496798;
 $brand-cta: #FF8700;
 $base-grid: 4px;
 $highlight-bg: #E0F0FA;
+$blue-link: #0f2c55;
+
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+body {
+  font-family: 'Muli';
+}
+
 .bg-input {
   background: $bg-brand;
 }
@@ -65,7 +73,7 @@ $highlight-bg: #E0F0FA;
   background: white;
 }
 .preview-panel {
-  max-width: 1000px; 
+  // max-width: 1000px; 
   margin: 0 auto;
 }
 .btn-primary {
@@ -99,4 +107,7 @@ $highlight-bg: #E0F0FA;
   z-index: 5;
   top: 0;
   left: calc(50% - 294.5px);
+}
+.text-link {
+  color: $blue-link;
 }

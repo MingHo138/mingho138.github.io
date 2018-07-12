@@ -1,0 +1,193 @@
+mixin preview(jobad)
+  div.preview-panel(id=jobad.Id style="display: none;")
+    if jobad.AdBanner
+      //- fill white space with blurred version of the image
+      .mb-2.text-center.position-relative(style="overflow: hidden; border: 5px solid #" + jobad.AdBorder)
+        img(src=jobad.AdBanner style="opacity:0")
+        //- banner display on top
+        .display-banner
+          img(src=jobad.AdBanner)
+        //- blurred background banner
+        .bg-banner(style="background-image: url(\"" + jobad.AdBanner + "\")")
+    //- key info
+    .card.mb-3
+      .card-body
+        .row
+          .col
+            h4 !{jobad.JobTitle}
+          //- if jobad.CompanyLogo
+            .col-2(style="position:relative; max-width: 150px;")
+              img(src=jobad.CompanyLogo style="position: absolute; top: 25%; left: 20%")
+            div.text-primary !{jobad.Company}
+      .card-footer
+        .row
+          .col 
+            i.fa.fa-dollar-sign.fa-fw.mr-1
+            span !{jobad.Salary}
+          .col 
+            i.fa.fa-map-marker-alt.fa-fw.mr-1
+            span !{jobad.Location}
+          .col 
+            i.fa.fa-fw.fa-calendar-alt.mr-1
+            span Expires in !{expireDate} days
+    .row
+      .col-12
+        //- job description
+        .card.mb-3
+          .card-header Job Description
+          .card-body !{jobad.JobDesc}
+
+      .col-12
+        //- job requirement
+        .card.mb-3
+          .card-header Job Requirement
+          .card-body
+            .row
+              .col
+                +reqList('Job Posted & Closing Date', jobad.PostDate + ' to ' + jobad.UnavailableAfter.substring(0,9), 'clock' )
+                +reqList('Career Level', jobad.CareerLevel, 'signal')
+                +reqList('Qualification', jobad.Qualification, 'graduation-cap')
+                +reqList('JobFunction', jobad.JobFunction, 'building')
+              .col
+                +reqList('Industry', jobad.Industry, 'industry')
+                +reqList('Years of Experience', jobad.WorkExperience, 'briefcase')
+                +reqList('Employment Type', jobad.EmploymentTerm, 'handshake')
+                if jobad.BenefitId != ""
+                  +reqList('Benefits', jobad.BenefitId, 'star')
+        
+        //- company overview
+        if jobad.CompanyDesc
+          .card.mb-3
+            .card-header Company Overview
+            if jobad.CompanyDescTidy
+              .card-body !{jobad.CompanyDescTidy}
+            else
+              .card-body !{jobad.CompanyDesc}
+
+        //- we offer you
+        //- .card.mb-3
+          .card-header We Offer You
+          .card-body
+            ul
+              li= jobad.Summary1
+              li= jobad.Summary2
+              li= jobad.Summary3
+
+mixin jobcard(jobad)
+  .border.border-bottom-0.p-3.list-card(class=jobad.AdType == 2 ? 'highlight': '' data-target="#"+jobad.Id id='jobcard' + jobad.Id onclick='handleClick(' + jobad.Id + ')')
+    a(href="#") !{jobad.JobTitle}
+    div !{jobad.Company}
+    ul.mt-2(style="padding-left: 20px")
+      li= jobad.Summary1
+      li= jobad.Summary2
+      li= jobad.Summary3
+    div
+      i.fa.fa-fw.fa-map-marker-alt.mr-1
+      span !{jobad.Location}
+    div 
+      i.fa.fa-fw.fa-dollar-sign.mr-1
+      span !{jobad.Salary}
+    .mt-2 !{jobad.PostDate}
+    if jobad.CompanyLogo
+      img.logo(src=jobad.CompanyLogo)
+
+mixin reqList(header, content)
+  li.mb-3
+    div
+      small= header
+    div !{content}
+
+mixin topNav
+  .container.pt-3.pb-3
+    img(src="https://content.jobsdbcdn.com/Content/d0521/images/Shared/v8Revamp2/jobsdb_logo_general_2015.png")
+    each item in ['Home', 'MyJobsDB', 'Resources', 'Career Insights']
+      a.ml-4.text-primary= item
+
+mixin searchForm
+  .row
+    .col
+      input.form-control(placeholder="Search job")
+    .col
+      select.form-control
+        option All job functions
+    .col
+      select.form-control
+        option All locations
+    .col
+      button.btn.btn-primary.btn-block Search
+  .mt-2
+      span.text-white Filters
+      each filter in ['Salary', 'Job type', 'Career level']
+        button.btn.btn-secondary.ml-2= filter
+
+mixin searchInput(compact)
+  .search-input.bg-input.p-3
+    if compact == 'compact'
+      .container
+        +searchForm()
+    else
+      +searchForm()
+
+mixin reqList(label, val, icon)
+  .mb-2
+    .row
+      if icon
+        .col(style="max-width: 30px")
+            i(class='fa fa-fw fa-' + icon)
+      .col
+        small !{label}
+        if label === 'Benefits'
+          +benefit(val)
+        else if label === 'JobFunction'
+          each item in val
+            div !{item}
+        else 
+          div !{val}
+
+mixin benefit(benefits)
+  //- .bg-info !{benefits}
+  each benefit in benefits
+    if benefit === 1
+      div Five day work week
+    if benefit === 2
+      div Flexible working hours
+    if benefit === 3
+      div Work from home
+    if benefit === 4
+      div Medical insurance
+    if benefit === 5
+      div Dental insurance
+    if benefit === 6
+      div Life insurnce
+    if benefit === 7
+      div Double pay
+    if benefit === 8
+      div Performance bonus
+    if benefit === 9
+      div Gratuity
+    if benefit === 10
+      div Overtime pay
+    if benefit === 11
+      div Educational allowance
+    if benefit === 12
+      div Housing allowance
+    if benefit === 13
+      div Travel allowance
+    if benefit === 14
+      div Free shuttle bus
+    if benefit === 15
+      div Transportational allowance
+
+mixin navigation(navItem)
+  .p-2.pl-3.pr-3
+    .d-flex
+      span.d-inline-block.mr-3(style="width: 100px;")
+        +logoDB()
+      for item in navItem
+        a.text-link.mr-3(href="#") !{item}
+
+mixin footer()
+  //- .bg-success.p-3.text-center Footer here
+  .text-muted.text-center.pb-3
+    .mb-2 Privacy Statement | Terms & Conditions | Site Map
+    div Copyright © 1998-2018, jobsDB.All Rights Reserved.

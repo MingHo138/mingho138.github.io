@@ -11,14 +11,15 @@ include data/jobdetail.pug
 
 //- SRP page starts here
 html
-  head
+head
     +header("Search Result Page")
   body
     .d-flex.flex-column(style="max-height: 100vh;")
       //- header
-      +navigation(navItem)
+      .container
+        +navigation(navItem)
       //-  search input form
-      +searchInput()
+      +searchInput('compact')
       .d-flex
         //- job listing
         div(style="width:440px; overflow: scroll")
