@@ -14,11 +14,16 @@ const handleClick = (jobadId) => {
 
     // change view in new tab link
     $('#jobad-newtab').prop("href", 'jobad-' + jobadId + '.html')
+
 }
 
 const init = () => {
     const initAd = '100003006185288';
     handleClick(initAd);
+}
+
+const toggleFilter = () => {
+    $('#filters').slideToggle('fast');
 }
 
 $(document).ready(function() {

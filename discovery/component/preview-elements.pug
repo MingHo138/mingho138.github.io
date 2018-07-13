@@ -114,8 +114,14 @@ mixin searchForm
       select.form-control
         option All locations
     .col
-      button.btn.btn-primary.btn-block Search
-  .mt-2
+      .row
+        .col-5
+          button.btn.btn-link.btn-block.text-white(onclick="toggleFilter()") 
+            i.fa.fa-angle-down.mr-2
+            | More
+        .col
+          button.btn.btn-primary.btn-block Search
+  #filters.mt-2(style="display:none")
       span.text-white Filters
       each filter in ['Salary', 'Job type', 'Career level']
         button.btn.btn-secondary.ml-2= filter
@@ -179,7 +185,7 @@ mixin benefit(benefits)
       div Transportational allowance
 
 mixin navigation(navItem)
-  .p-2.pl-3.pr-3
+  #header.p-2.pl-3.pr-3
     .d-flex
       span.d-inline-block.mr-3(style="width: 100px;")
         +logoDB()
