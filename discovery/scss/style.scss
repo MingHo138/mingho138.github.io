@@ -2,12 +2,13 @@ $bg-brand: #0E2956;
 $bg-grey: #EEEEEE;
 $grey-border: #ccc;
 $grey-bg: #eee;
-$hover-bg: #e3eff4;
-$active-bg: #496798;
+$hover-bg: #EEF8FC;
+$active-bg: #DDF1FA;
 $brand-cta: #FF8700;
 $base-grid: 4px;
 $highlight-bg: #E0F0FA;
 $blue-link: #0f2c55;
+$blue-border: #94C9E0;
 
 @import url('https://fonts.googleapis.com/css?family=Muli');
 
@@ -30,16 +31,22 @@ body {
     background: $highlight-bg;
   }
   &:hover {
-    background: darken($highlight-bg, 3%);
+    background: $hover-bg;
     cursor: pointer;
   }
   &.active {
     // box-shadow: inset ($base-grid*1) 0px 0px 0px $bg-brand;
     background: $active-bg;
-    color: white;
-    a { color: white }
+    // color: white;
+    // a { color: white }
   }
 }
+.list-card-inner {
+  // background: white;
+  border: $blue-border 1px solid;
+}
+
+
 .logo {
   position: absolute;
   right: 30px;
