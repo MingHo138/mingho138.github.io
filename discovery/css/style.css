@@ -5,6 +5,9 @@ body {
 .bg-input {
   background: #0E2956; }
 
+.bg-grey {
+  background-color: #EEEEEE; }
+
 .joblisting {
   background: #EEEEEE;
   margin-top: -15px; }

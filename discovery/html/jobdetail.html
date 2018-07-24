@@ -1,33 +1,44 @@
 
 <html>
   <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="../css/style.css"/>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <head>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
+      <link rel="stylesheet" href="../css/style.css"/>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+      <script src="../js/function.js"></script>
+      <title>Job Detail Page</title>
+    </head>
   </head>
-  <body>
-    <div class="container mt-3"><img src="https://content.jobsdbcdn.com/Content/CmsContent/Logo/HK/JobsDBFiles/CompanyLogo/banner-m/14904m.jpg"/>
-      <h3>Key Account Manager &#40;New Headcount&#41;</h3>
-      <h5>jobsDB Hong Kong <img src="https://content.jobsdbcdn.com/Content/CmsContent/Logo/HK/JobsDBFiles/CompanyLogo/logo-s/12534s.png"/></h5>
-      <div class="card mb-3">
-        <div class="card-body">
-          <ul class="mb-0">
-            <li>Salary provided</li>
-            <li>Wan Chai</li>
-            <li>23-May-18</li>
-          </ul>
+  <body class="bg-grey">
+    <div class="container">
+      <div class="preview-panel" id="100003006185288" style="display: none;">
+        <div class="mb-2 text-center position-relative" style="overflow: hidden; border: 5px solid #0a4b84"><img src="https://content.jobsdbcdn.com/Content/CmsContent/Logo/HK/JobsDBFiles/CompanyLogo/banner-m/14904m.jpg" style="opacity:0"/>
+          <div class="display-banner"><img src="https://content.jobsdbcdn.com/Content/CmsContent/Logo/HK/JobsDBFiles/CompanyLogo/banner-m/14904m.jpg"/></div>
+          <div class="bg-banner" style="background-image: url(&quot;https://content.jobsdbcdn.com/Content/CmsContent/Logo/HK/JobsDBFiles/CompanyLogo/banner-m/14904m.jpg&quot;)"></div>
         </div>
-        <div class="card-footer">
-          <button class="btn btn-secondary">Save</button>
-          <button class="btn btn-primary ml-3">Apply</button>
+        <div class="card mb-3">
+          <div class="card-body">
+            <div class="row">
+              <div class="col">
+                <h4>Key Account Manager &#40;New Headcount&#41;</h4>
+                <div>jobsDB Hong Kong </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="mr-4 d-inline-block"><i class="fa fa-dollar-sign fa-fw mr-1"></i><span>Salary provided</span></div>
+            <div class="mr-4 d-inline-block"> <i class="fa fa-map-marker-alt fa-fw mr-1"></i><span>Wan Chai</span></div>
+            <div class="mr-4 d-inline-block"> <i class="fa fa-fw fa-calendar-alt mr-1"></i><span>Expires in  days</span></div>
+          </div>
         </div>
-      </div>
-      <div class="card mb-3">
-        <div class="card-header">Job Description</div>
-        <div class="card-body">
-          <p><p style="text-align: justify; line-height: normal;"><span style="font-family: arial,helvetica,sans-serif; font-size: 10pt;"><strong><span style="color: #31849b;">About Our Company</span></strong><strong><span style="color: #333333;"><br></span></strong></span></p>
+        <div class="row">
+          <div class="col-md-8" id="jobdesc">
+            <div class="card mb-3">
+              <div class="card-header">Job Description</div>
+              <div class="card-body"><p style="text-align: justify; line-height: normal;"><span style="font-family: arial,helvetica,sans-serif; font-size: 10pt;"><strong><span style="color: #31849b;">About Our Company</span></strong><strong><span style="color: #333333;"><br></span></strong></span></p>
 <p style="text-align: justify; line-height: normal;"><span style="color: black; font-family: arial,helvetica,sans-serif; font-size: 10pt;">At jobsDB, we are committed and focused on &ldquo;Improving lives through better careers&rdquo;.</span></p>
 <p style="text-align: justify; line-height: normal;"><span style="color: black; font-family: arial,helvetica,sans-serif; font-size: 10pt;">With rapid growth in our company business, we are expanding our sales team to acquire more sales talents with the passion to join our growing company. jobsDB is definitely a great place for you to grow and to explore your career under a driven and supportive culture.</span></p>
 <p style="text-align: justify; line-height: normal;"><span style="font-family: arial,helvetica,sans-serif; font-size: 10pt;"><strong><span style="color: #31849b;">About Your Role</span></strong></span></p>
@@ -56,14 +67,116 @@
 <p style="text-align: justify; line-height: normal;"><span style="font-family: arial,helvetica,sans-serif; font-size: 10pt;"><strong><span style="color: #31849b;">How to Apply</span></strong></span></p>
 <p style="text-align: justify; line-height: normal;"><span style="color: black; font-family: arial,helvetica,sans-serif; font-size: 10pt;">If you are passionate, driven and looking for a new and exciting opportunity within a successful and growing company, this may be the right role for you.</span></p>
 <p style="text-align: justify; line-height: normal;"><span style="font-family: arial,helvetica,sans-serif; font-size: 10pt;"><strong><em><span style="color: #31849b;">Please click &ldquo;Apply Now&rdquo; to submit your application.</span></em></strong><strong><em><span style="color: #333333;">&nbsp;</span></em></strong></span></p>
-<p style="text-align: justify; line-height: normal;"><span style="font-family: arial,helvetica,sans-serif; font-size: 10pt;"><em><span style="color: black;">All personal information submitted by job applicants will be used for recruitment purposes and we reserve the rights to consider the applications for other positions in our Group.</span></em></span></p></p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header">Company Description</div>
-        <div class="card-body">
-          <p><p style="box-sizing: border-box; outline: none; margin: 0px 0px 12px; zoom: 1; position: relative; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; text-align: justify; line-height: normal;"><span style="box-sizing: border-box; outline: none; color: #000000; font-family: arial, helvetica, sans-serif; font-size: 10pt;">jobsDB and&nbsp;<a style="box-sizing: border-box; outline: none; background-color: transparent; color: #298eb9; text-decoration: none;" href="http://jobstreet.com/" target="_blank"><span style="box-sizing: border-box; outline: none; color: #000000;">JobStreet.com</span></a>&nbsp;are part of SEEK Asia, which is the leading online employment market place in Asia. SEEK Asia covers 7 countries namely Hong Kong, Indonesia, Malaysia, Philippines, Singapore, Thailand and Vietnam.</span></p>
-<p style="box-sizing: border-box; outline: none; margin: 0px 0px 12px; zoom: 1; position: relative; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; text-align: justify; line-height: normal;"><span style="box-sizing: border-box; outline: none; color: #000000; font-family: arial, helvetica, sans-serif; font-size: 10pt;">SEEK Asia is the extension of the Australian Securities Exchange listed company called SEEK. The company&rsquo;s purpose is to help improve people&rsquo;s lives through a better career. SEEK Asia&rsquo;s database consist of over 500,000 corporate hirers and over 24 million candidates.</span></p></p>
+<p style="text-align: justify; line-height: normal;"><span style="font-family: arial,helvetica,sans-serif; font-size: 10pt;"><em><span style="color: black;">All personal information submitted by job applicants will be used for recruitment purposes and we reserve the rights to consider the applications for other positions in our Group.</span></em></span></p></div>
+            </div>
+            <div class="card mb-3">
+              <div class="card-header">Job Requirement</div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <div class="mb-2">
+                      <div class="row">
+                        <div class="col" style="max-width: 30px"><i class="fa fa-fw fa-clock"></i></div>
+                        <div class="col"><small>Job Posted & Closing Date</small>
+                          <div>05-Jun-18 to 30-Jun-20</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2">
+                      <div class="row">
+                        <div class="col" style="max-width: 30px"><i class="fa fa-fw fa-signal"></i></div>
+                        <div class="col"><small>Career Level</small>
+                          <div>Not Specified</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2">
+                      <div class="row">
+                        <div class="col" style="max-width: 30px"><i class="fa fa-fw fa-graduation-cap"></i></div>
+                        <div class="col"><small>Qualification</small>
+                          <div>Not Specified</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2">
+                      <div class="row">
+                        <div class="col" style="max-width: 30px"><i class="fa fa-fw fa-building"></i></div>
+                        <div class="col"><small>JobFunction</small>
+                          <div>Sales, CS &amp; Business Devpt &gt; Business Development</div>
+                          <div>Sales, CS &amp; Business Devpt &gt; Account Servicing</div>
+                          <div>Sales, CS &amp; Business Devpt &gt; Direct Sales</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="mb-2">
+                      <div class="row">
+                        <div class="col" style="max-width: 30px"><i class="fa fa-fw fa-industry"></i></div>
+                        <div class="col"><small>Industry</small>
+                          <div>Media / Publishing / Printing</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2">
+                      <div class="row">
+                        <div class="col" style="max-width: 30px"><i class="fa fa-fw fa-briefcase"></i></div>
+                        <div class="col"><small>Years of Experience</small>
+                          <div>Not Specified</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2">
+                      <div class="row">
+                        <div class="col" style="max-width: 30px"><i class="fa fa-fw fa-handshake"></i></div>
+                        <div class="col"><small>Employment Type</small>
+                          <div>Full Time, Permanent</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-2">
+                      <div class="row">
+                        <div class="col" style="max-width: 30px"><i class="fa fa-fw fa-star"></i></div>
+                        <div class="col"><small>Benefits</small>
+                          <div>Dental insurance</div>
+                          <div>Educational allowance</div>
+                          <div>Five day work week</div>
+                          <div>Medical insurance</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3" id="companyinfo">
+              <div class="card-header">Company Overview</div>
+              <div class="card-body"><p>jobsDB and JobStreet.com are part of SEEK Asia, which is the leading online employment market place in Asia. SEEK Asia covers 7 countries namely Hong Kong, Indonesia, Malaysia, Philippines, Singapore, Thailand and Vietnam. </p><p>SEEK Asia is the extension of the Australian Securities Exchange listed company called SEEK. The company’s purpose is to help improve people’s lives through a better career. SEEK Asia’s database consist of over 500,000 corporate hirers and over 24 million candidates.</p></div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-3">
+              <div class="card-header">We Offer You</div>
+              <div class="card-body">
+                <ul class="pl-3">
+                  <li>Deliver value to our Recruitment Agency clients</li>
+                  <li>Self driven role within a supportive team</li>
+                  <li>Reward based on achieving results</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card mb-3" id="companyinfo">
+              <div class="card-header">Company Overview</div>
+              <div class="card-body"><p>jobsDB and JobStreet.com are part of SEEK Asia, which is the leading online employment market place in Asia. SEEK Asia covers 7 countries namely Hong Kong, Indonesia, Malaysia, Philippines, Singapore, Thailand and Vietnam. </p><p>SEEK Asia is the extension of the Australian Securities Exchange listed company called SEEK. The company’s purpose is to help improve people’s lives through a better career. SEEK Asia’s database consist of over 500,000 corporate hirers and over 24 million candidates.</p></div>
+            </div>
+            <div>
+              <ul>
+                <li><a href="#">Share</a></li>
+                <li><a href="#">Report this job ad</a></li>
+                <li><a href="#">Print this job ad</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
