@@ -9,6 +9,8 @@ include data/jobdetail.pug
 - var postTime = Math.floor(Math.random()*60 + 1)
 - var navItem = ['My jobsDB', 'Resources', 'Career Insights']
 
+
+
 //- SRP page starts here
 html
   head
@@ -48,4 +50,5 @@ html
           .p-3.bg-grey
             each jobad in jobdetail
               +preview(jobad)
-    +intercom()
+    //- +intercom()
+    +hideAllAd()

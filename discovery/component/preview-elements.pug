@@ -1,5 +1,5 @@
 mixin preview(jobad, layout)
-  div.preview-panel(id=jobad.Id style="display: none;")
+  div.preview-panel(id=jobad.Id style=(layout == 'standalone' ? "" : "display: block;"))
     if jobad.AdBanner
       //- fill white space with blurred version of the image
       .mb-2.text-center.position-relative(style="overflow: hidden; border: 5px solid #" + jobad.AdBorder)
@@ -30,28 +30,29 @@ mixin preview(jobad, layout)
         .mr-4.d-inline-block 
           i.fa.fa-fw.fa-calendar-alt.mr-1
           span Expires in !{expireDate} days
-    //- .row.mb-3
-    //-   .col
-    //-     .btn-group(role='group', aria-label='Basic example')
-    //-       a.btn.btn-secondary(href="#jobdesc") Job description
-    //-       a.btn.btn-secondary(href="#companyinfo") Company info
+    .mb-3.d-md-none
+      .row
+        .col
+          a.btn.btn-block.btn-secondary(href="#jobdesc") Job Description
+        .col
+          a.btn.btn-block.btn-secondary(href="#companyoverview") Company Overview
     .row
       div#jobdesc(class=layout == "standalone" ? "col-md-8" : "col-12")
         //- job description
         .card.mb-3
           .card-header Job Description
           .card-body !{jobad.JobDesc}
-        //- job requirement
+        //- additional information
         .card.mb-3
-          .card-header Job Requirement
+          .card-header Additional Information
           .card-body
             .row
-              .col
+              .col-md
                 +reqList('Job Posted & Closing Date', jobad.PostDate + ' to ' + jobad.UnavailableAfter.substring(0,9), 'clock' )
                 +reqList('Career Level', jobad.CareerLevel, 'signal')
                 +reqList('Qualification', jobad.Qualification, 'graduation-cap')
                 +reqList('JobFunction', jobad.JobFunction, 'building')
-              .col
+              .col-md
                 +reqList('Industry', jobad.Industry, 'industry')
                 +reqList('Years of Experience', jobad.WorkExperience, 'briefcase')
                 +reqList('Employment Type', jobad.EmploymentTerm, 'handshake')
@@ -60,7 +61,7 @@ mixin preview(jobad, layout)
         
         //- company overview
         if jobad.CompanyDesc
-          #companyinfo.card.mb-3
+          #companyoverview.card.mb-3
             .card-header Company Overview
             if jobad.CompanyDescTidy
               .card-body !{jobad.CompanyDescTidy}
@@ -211,7 +212,13 @@ mixin navigation(navItem)
         a.text-link.mr-3(href="#") !{item}
 
 mixin footer()
-  //- .bg-success.p-3.text-center Footer here
   .text-muted.text-center.pb-3
     .mb-2 Privacy Statement | Terms & Conditions | Site Map
     div Copyright © 1998-2018, jobsDB.All Rights Reserved.
+
+//- hide all job ad except the first one for split page
+mixin hideAllAd()
+  script.
+    $(document).ready(function() {
+      init()
+    });

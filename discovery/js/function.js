@@ -25,7 +25,3 @@ const init = () => {
 const toggleFilter = () => {
     $('#filters').slideToggle('fast');
 }
-
-$(document).ready(function() {
-    init()
-});
