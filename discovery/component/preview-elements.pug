@@ -37,7 +37,7 @@ mixin preview(jobad, layout)
         .col
           a.btn.btn-block.btn-secondary(href="#companyoverview") Company Overview
     .row
-      div#jobdesc(class=layout == "standalone" ? "col-lg-7 col-xl-8" : "col-12")
+      div#jobdesc(class=layout == "standalone" ? "col-lg-7" : "col-12")
         //- job description
         .card.mb-3
           .card-header Job Description
@@ -68,7 +68,7 @@ mixin preview(jobad, layout)
             else
               .card-body !{jobad.CompanyDesc}
 
-      div(class=layout == "standalone" ? "col-lg-5 col-xl-4" : "col-12")
+      div(class=layout == "standalone" ? "col-lg-5" : "col-12")
         //- we offer you
         if layout == 'standalone'
           .card.mb-3
