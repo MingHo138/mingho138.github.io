@@ -1,6 +1,7 @@
 include component/header.pug
 include component/jobdetail.pug
 include component/intercom.pug
+include component/hotjar.pug
 include component/logo-jobsdb.pug
 include component/preview-elements.pug
 include data/jobdetail.pug
@@ -51,4 +52,5 @@ html
             each jobad in jobdetail
               +preview(jobad)
     //- +intercom()
+    +hotjar()
     +hideAllAd()
