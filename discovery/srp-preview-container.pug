@@ -20,6 +20,7 @@ html
     .d-flex.flex-column(style="max-height: 100vh;")
       //- header
       .container
+        button.btn.btn-primary(onClick="getFeedback()") Feedback!
         +navigation(navItem)
       //-  search input form
       +searchInput('compact')
@@ -52,5 +53,9 @@ html
             each jobad in jobdetail
               +preview(jobad)
     //- +intercom()
+    script.
+      function getFeedback() {
+        hj('trigger', 'npsTrigger');
+      }
     +hotjar()
     +hideAllAd()
