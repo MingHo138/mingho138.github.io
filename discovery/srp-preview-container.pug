@@ -20,7 +20,6 @@ html
     .d-flex.flex-column(style="max-height: 100vh;")
       //- header
       .container
-        button.btn.btn-primary(onClick="getFeedback()") Feedback!
         +navigation(navItem)
       //-  search input form
       +searchInput('compact')
@@ -52,11 +51,17 @@ html
           .p-3.bg-grey
             each jobad in jobdetail
               +preview(jobad)
-    //- +intercom()
-    script.
-      function getFeedback() {
-        hj('trigger', 'npsTrigger');
-        hj('tagRecording', ['test', 'welcome']);
-      }
+        .bottomNav.d-block.d-sm-none
+          .row
+            .col.text-center
+              i.fa.fa-search(style="position:relative; top: 20px;" onclick="Intercom('boot')")
+            .col.text-center
+              i.fa.fa-bars(style="position:relative; top: 20px;" onclick="Intercom('shutdown')")
+    +intercom()
+    //- script.
+    //-   function getFeedback() {
+    //-     hj('trigger', 'npsTrigger');
+    //-     hj('tagRecording', ['test', 'welcome']);
+    //-   }
     +hotjar()
     +hideAllAd()

@@ -121,3 +121,12 @@ body {
 .text-link {
   color: $blue-link;
 }
+.bottomNav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 55px;
+  background: #fff;
+  border-top: $grey-border 1px solid;
+}
