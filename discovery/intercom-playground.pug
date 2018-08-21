@@ -1,5 +1,7 @@
 include component/header.pug
 
+- var jobCount = 0
+
 mixin intercom
     script.
         function detectmob() { 
@@ -22,12 +24,27 @@ mixin intercom
             app_id: "o7zrfpg6",
             Environment: "SRP",
             horizontal_padding: 20, 
-            vertical_padding: 120,
+            vertical_padding: 20,
             hide_default_launcher: is_mobile,
             custom_launcher_selector: '#my_custom_link'
         };
     script.
         (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/o7zrfpg6';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
+
+mixin feedback
+    .list-group-item.text-center
+        h3 How would you rate your experience?
+        button.btn.btn-lg.btn-primary#my_custom_link Feedback
+
+mixin control
+    .list-group-item.text-center 
+        h3 Intercom Control
+        button.btn.btn-secondary(onclick="Intercom('showNewMessage')") Write new message
+        button.btn.btn-secondary(onclick="Intercom('showMessages')") Show messages
+        button.btn.btn-secondary(onclick="Intercom('show')") Show messenger
+        button.btn.btn-secondary(onclick="Intercom('hide')") Hide messenger
+        button.btn.btn-secondary(onclick="Intercom('shutdown')") Shut down intercom launcher
+
 
 html
   head
@@ -35,5 +52,14 @@ html
   body
     .container.mt-3.mb-3
         h1 Intercom playground
-        button.btn.btn-primary#my_custom_link Custom Launcher
+        .list-group
+            while jobCount <= 10
+                if jobCount == 3
+                    +feedback
+                    .d-none=jobCount++
+                if jobCount == 6
+                    +control
+                    .d-none=jobCount++
+                else
+                    .list-group-item.text-center Job card !{jobCount++}
     +intercom()

@@ -16,7 +16,31 @@
   <body>
     <div class="container mt-3 mb-3">
       <h1>Intercom playground</h1>
-      <button class="btn btn-primary" id="my_custom_link">Custom Launcher</button>
+      <div class="list-group">
+        <div class="list-group-item text-center">Job card 0</div>
+        <div class="list-group-item text-center">Job card 1</div>
+        <div class="list-group-item text-center">Job card 2</div>
+        <div class="list-group-item text-center">
+          <h3>How would you rate your experience?</h3>
+          <button class="btn btn-lg btn-primary" id="my_custom_link">Feedback</button>
+        </div>
+        <div class="d-none">3</div>
+        <div class="list-group-item text-center">Job card 4</div>
+        <div class="list-group-item text-center">Job card 5</div>
+        <div class="list-group-item text-center"> 
+          <h3>Intercom Control</h3>
+          <button class="btn btn-secondary" onclick="Intercom('showNewMessage')">Write new message</button>
+          <button class="btn btn-secondary" onclick="Intercom('showMessages')">Show messages</button>
+          <button class="btn btn-secondary" onclick="Intercom('show')">Show messenger</button>
+          <button class="btn btn-secondary" onclick="Intercom('hide')">Hide messenger</button>
+          <button class="btn btn-secondary" onclick="Intercom('shutdown')">Shut down intercom launcher</button>
+        </div>
+        <div class="d-none">6</div>
+        <div class="list-group-item text-center">Job card 7</div>
+        <div class="list-group-item text-center">Job card 8</div>
+        <div class="list-group-item text-center">Job card 9</div>
+        <div class="list-group-item text-center">Job card 10</div>
+      </div>
     </div>
     <script>
       function detectmob() { 
@@ -39,7 +63,7 @@
           app_id: "o7zrfpg6",
           Environment: "SRP",
           horizontal_padding: 20, 
-          vertical_padding: 120,
+          vertical_padding: 20,
           hide_default_launcher: is_mobile,
           custom_launcher_selector: '#my_custom_link'
       };
