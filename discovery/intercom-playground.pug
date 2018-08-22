@@ -43,7 +43,9 @@ mixin control
         button.btn.btn-secondary(onclick="Intercom('showMessages')") Show messages
         button.btn.btn-secondary(onclick="Intercom('show')") Show messenger
         button.btn.btn-secondary(onclick="Intercom('hide')") Hide messenger
+        hr
         button.btn.btn-secondary(onclick="Intercom('shutdown')") Shut down intercom launcher
+        button.btn.btn-secondary(onclick="Intercom('boot', {app_id: 'o7zrfpg6',Environment: 'SRP', custom_launcher_selector: '#my_custom_link'})") Boot intercom launcher
 
 
 html
