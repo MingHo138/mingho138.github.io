@@ -17,31 +17,62 @@
     <div class="container mt-3 mb-3">
       <h1>Intercom playground</h1>
       <div class="list-group">
-        <div class="list-group-item text-center">Job card 0</div>
-        <div class="list-group-item text-center">Job card 1</div>
-        <div class="list-group-item text-center">Job card 2</div>
-        <div class="list-group-item text-center">
-          <h3>How would you rate your experience?</h3>
+        <div class="list-group-item">
+          <div>Key Account Manager &#40;New Headcount&#41;</div>
+          <div>jobsDB Hong Kong </div>
+        </div>
+        <div class="list-group-item">
+          <div>Administrative Assistant &#40;Digital Solutions&#41;</div>
+          <div>ESD Services Limited &#40;ESDlife&#41;</div>
+        </div>
+        <div class="list-group-item">
+          <div>Senior Accountant&#47; Accountant</div>
+          <div>AMAC Human Resources Consultants &#40;安俊人力資源顧問&#41; &#40;formerly as Centaline Human Resources Consultants&#41;</div>
+        </div>
+        <div class="list-group-item text-center bg-light p-4">
+          <h3 class="mb-3">How would you rate your experience?</h3>
           <button class="btn btn-lg btn-primary" id="my_custom_link">Feedback</button>
         </div>
-        <div class="d-none">3</div>
-        <div class="list-group-item text-center">Job card 4</div>
-        <div class="list-group-item text-center">Job card 5</div>
-        <div class="list-group-item text-center"> 
-          <h3>Intercom Control</h3>
+        <div class="list-group-item">
+          <div>Customer Service Executive &#47; Senior Customer Service Executive</div>
+          <div>Quantium Solutions &#40;Hong Kong&#41; Limited</div>
+        </div>
+        <div class="list-group-item text-center bg-light p-4">
+          <h3 class="mb-3">How would you rate your experience?</h3>
+          <button class="btn btn-lg btn-outline-danger"><i class="fa fa-2x fa-frown"></i></button>
+          <button class="btn btn-lg btn-outline-warning"><i class="fa fa-2x fa-meh"></i></button>
+          <button class="btn btn-lg btn-outline-success"><i class="fa fa-2x fa-smile"></i></button>
+        </div>
+        <div class="list-group-item">
+          <div>Safety Supervisor</div>
+          <div>Keio Engineering Co Ltd</div>
+        </div>
+        <div class="list-group-item">
+          <div>Assistant Account Supervisor &#47; Account Supervisor</div>
+          <div>Richful Deyong Corporate Management Limited</div>
+        </div>
+        <div class="list-group-item">
+          <div>Project Executive &#40;Digital Marketing&#41;</div>
+          <div>BuzzFever</div>
+        </div>
+        <div class="list-group-item text-center bg-light">
+          <h3 class="mb-3">Intercom Control</h3>
           <button class="btn btn-secondary" onclick="Intercom('showNewMessage')">Write new message</button>
-          <button class="btn btn-secondary" onclick="Intercom('showMessages')">Show messages</button>
+          <button class="btn btn-secondary" onclick="Intercom('showMessages')">Show list of messages</button>
           <button class="btn btn-secondary" onclick="Intercom('show')">Show messenger</button>
           <button class="btn btn-secondary" onclick="Intercom('hide')">Hide messenger</button>
           <hr/>
           <button class="btn btn-secondary" onclick="Intercom('shutdown')">Shut down intercom launcher</button>
           <button class="btn btn-secondary" onclick="Intercom('boot', {app_id: 'o7zrfpg6',Environment: 'SRP', custom_launcher_selector: '#my_custom_link'})">Boot intercom launcher</button>
         </div>
-        <div class="d-none">6</div>
-        <div class="list-group-item text-center">Job card 7</div>
-        <div class="list-group-item text-center">Job card 8</div>
-        <div class="list-group-item text-center">Job card 9</div>
-        <div class="list-group-item text-center">Job card 10</div>
+        <div class="list-group-item">
+          <div>Principal Audit Manager</div>
+          <div>China Resources Enterprise, Limited</div>
+        </div>
+        <div class="list-group-item">
+          <div>Phone Banking - Customer Services Officer - Basic Salary 15K  &#40;&#36;8,000新人獎&#47;No Selling&#47;五天工作&#41;</div>
+          <div>Teledirect Hong Kong Limited</div>
+        </div>
       </div>
     </div>
     <script>
@@ -66,13 +97,20 @@
           Environment: "SRP",
           horizontal_padding: 20, 
           vertical_padding: 20,
-          hide_default_launcher: is_mobile,
+          hide_default_launcher: true,
           custom_launcher_selector: '#my_custom_link'
       };
     </script>
     <script>
       (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/o7zrfpg6';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
       
+    </script>
+    <script>
+      function trigger() {
+          console.log("This works!");
+          //- Intercom('boot', {app_id: 'o7zrfpg6',Environment: 'SRP', custom_launcher_selector: '#my_custom_link'});
+          Intercom('showNewMessage');
+      }
     </script>
   </body>
 </html>

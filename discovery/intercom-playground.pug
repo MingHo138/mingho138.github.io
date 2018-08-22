@@ -1,4 +1,5 @@
 include component/header.pug
+include data/jobdetail.pug
 
 - var jobCount = 0
 
@@ -25,22 +26,33 @@ mixin intercom
             Environment: "SRP",
             horizontal_padding: 20, 
             vertical_padding: 20,
-            hide_default_launcher: is_mobile,
+            hide_default_launcher: true,
             custom_launcher_selector: '#my_custom_link'
         };
     script.
         (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/o7zrfpg6';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
 
 mixin feedback
-    .list-group-item.text-center
-        h3 How would you rate your experience?
+    .list-group-item.text-center.bg-light.p-4
+        h3.mb-3 How would you rate your experience?
         button.btn.btn-lg.btn-primary#my_custom_link Feedback
 
+mixin btn-emo(btncolor, icon)
+    button(class='btn btn-lg ' + btncolor)
+        i(class="fa fa-2x " + icon)
+
+mixin feedback-emotion
+    .list-group-item.text-center.bg-light.p-4
+        h3.mb-3 How would you rate your experience?
+        +btn-emo("btn-outline-danger", "fa-frown")
+        +btn-emo("btn-outline-warning", "fa-meh")
+        +btn-emo("btn-outline-success", "fa-smile")
+
 mixin control
-    .list-group-item.text-center 
-        h3 Intercom Control
+    .list-group-item.text-center.bg-light
+        h3.mb-3 Intercom Control
         button.btn.btn-secondary(onclick="Intercom('showNewMessage')") Write new message
-        button.btn.btn-secondary(onclick="Intercom('showMessages')") Show messages
+        button.btn.btn-secondary(onclick="Intercom('showMessages')") Show list of messages
         button.btn.btn-secondary(onclick="Intercom('show')") Show messenger
         button.btn.btn-secondary(onclick="Intercom('hide')") Hide messenger
         hr
@@ -55,13 +67,22 @@ html
     .container.mt-3.mb-3
         h1 Intercom playground
         .list-group
-            while jobCount <= 10
-                if jobCount == 3
-                    +feedback
-                    .d-none=jobCount++
-                if jobCount == 6
-                    +control
-                    .d-none=jobCount++
-                else
-                    .list-group-item.text-center Job card !{jobCount++}
+            each jobad, index in jobdetail
+                if index <= 10
+                    if index == 3
+                        +feedback
+                    if index == 4
+                        +feedback-emotion
+                    if index == 7
+                        +control
+                    else
+                        .list-group-item
+                            div !{jobad.JobTitle}
+                            div !{jobad.Company}
     +intercom()
+    script.
+        function trigger() {
+            console.log("This works!");
+            //- Intercom('boot', {app_id: 'o7zrfpg6',Environment: 'SRP', custom_launcher_selector: '#my_custom_link'});
+            Intercom('showNewMessage');
+        }
