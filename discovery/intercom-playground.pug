@@ -38,7 +38,7 @@ mixin feedback
         button.btn.btn-lg.btn-primary#my_custom_link Feedback
 
 mixin btn-emo(btncolor, icon)
-    button(class='btn btn-lg ' + btncolor)
+    button(class='btn btn-lg ' + btncolor onclick="Intercom('showNewMessage')")
         i(class="fa fa-2x " + icon)
 
 mixin feedback-emotion
