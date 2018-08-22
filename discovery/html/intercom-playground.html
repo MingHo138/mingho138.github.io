@@ -39,9 +39,14 @@
         </div>
         <div class="list-group-item text-center bg-light p-4">
           <h3 class="mb-3">How would you rate your experience?</h3>
-          <button class="btn btn-lg btn-outline-danger" onclick="Intercom('showNewMessage')"><i class="fa fa-2x fa-frown"></i></button>
-          <button class="btn btn-lg btn-outline-warning" onclick="Intercom('showNewMessage')"><i class="fa fa-2x fa-meh"></i></button>
-          <button class="btn btn-lg btn-outline-success" onclick="Intercom('showNewMessage')"><i class="fa fa-2x fa-smile"></i></button>
+          <div>
+            <button class="btn btn-lg btn-outline-danger" onclick="$('.feedback-prompt').slideDown()"><i class="fa fa-2x fa-frown"></i></button>
+            <button class="btn btn-lg btn-outline-warning" onclick="$('.feedback-prompt').slideDown()"><i class="fa fa-2x fa-meh"></i></button>
+            <button class="btn btn-lg btn-outline-success" onclick="$('.feedback-prompt').slideDown()"><i class="fa fa-2x fa-smile"></i></button>
+          </div>
+          <div class="mt-3 feedback-prompt">
+            <div class="button btn btn-primary" onclick="Intercom('showNewMessage')">Care to tell us why?</div>
+          </div>
         </div>
         <div class="list-group-item">
           <div>Safety Supervisor</div>
@@ -76,22 +81,22 @@
       </div>
     </div>
     <script>
-      function detectmob() { 
-          if( navigator.userAgent.match(/Android/i)
-          || navigator.userAgent.match(/webOS/i)
-          || navigator.userAgent.match(/iPhone/i)
-          || navigator.userAgent.match(/iPad/i)
-          || navigator.userAgent.match(/iPod/i)
-          || navigator.userAgent.match(/BlackBerry/i)
-          || navigator.userAgent.match(/Windows Phone/i)
-          ){
-              return true;
-          }
-          else {
-              return false;
-          }
-      }
-      var is_mobile = detectmob();
+      //- function detectmob() { 
+      //-     if( navigator.userAgent.match(/Android/i)
+      //-     || navigator.userAgent.match(/webOS/i)
+      //-     || navigator.userAgent.match(/iPhone/i)
+      //-     || navigator.userAgent.match(/iPad/i)
+      //-     || navigator.userAgent.match(/iPod/i)
+      //-     || navigator.userAgent.match(/BlackBerry/i)
+      //-     || navigator.userAgent.match(/Windows Phone/i)
+      //-     ){
+      //-         return true;
+      //-     }
+      //-     else {
+      //-         return false;
+      //-     }
+      //- }
+      //- var is_mobile = detectmob();
       window.intercomSettings = {
           app_id: "o7zrfpg6",
           Environment: "SRP",
@@ -104,13 +109,6 @@
     <script>
       (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/o7zrfpg6';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
       
-    </script>
-    <script>
-      function trigger() {
-          console.log("This works!");
-          //- Intercom('boot', {app_id: 'o7zrfpg6',Environment: 'SRP', custom_launcher_selector: '#my_custom_link'});
-          Intercom('showNewMessage');
-      }
     </script>
   </body>
 </html>

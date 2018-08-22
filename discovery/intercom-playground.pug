@@ -5,22 +5,22 @@ include data/jobdetail.pug
 
 mixin intercom
     script.
-        function detectmob() { 
-            if( navigator.userAgent.match(/Android/i)
-            || navigator.userAgent.match(/webOS/i)
-            || navigator.userAgent.match(/iPhone/i)
-            || navigator.userAgent.match(/iPad/i)
-            || navigator.userAgent.match(/iPod/i)
-            || navigator.userAgent.match(/BlackBerry/i)
-            || navigator.userAgent.match(/Windows Phone/i)
-            ){
-                return true;
-            }
-            else {
-                return false;
-            }
-        }
-        var is_mobile = detectmob();
+        //- function detectmob() { 
+        //-     if( navigator.userAgent.match(/Android/i)
+        //-     || navigator.userAgent.match(/webOS/i)
+        //-     || navigator.userAgent.match(/iPhone/i)
+        //-     || navigator.userAgent.match(/iPad/i)
+        //-     || navigator.userAgent.match(/iPod/i)
+        //-     || navigator.userAgent.match(/BlackBerry/i)
+        //-     || navigator.userAgent.match(/Windows Phone/i)
+        //-     ){
+        //-         return true;
+        //-     }
+        //-     else {
+        //-         return false;
+        //-     }
+        //- }
+        //- var is_mobile = detectmob();
         window.intercomSettings = {
             app_id: "o7zrfpg6",
             Environment: "SRP",
@@ -38,15 +38,18 @@ mixin feedback
         button.btn.btn-lg.btn-primary#my_custom_link Feedback
 
 mixin btn-emo(btncolor, icon)
-    button(class='btn btn-lg ' + btncolor onclick="Intercom('showNewMessage')")
+    button(class='btn btn-lg ' + btncolor onclick="$('.feedback-prompt').slideDown()")
         i(class="fa fa-2x " + icon)
 
 mixin feedback-emotion
     .list-group-item.text-center.bg-light.p-4
         h3.mb-3 How would you rate your experience?
-        +btn-emo("btn-outline-danger", "fa-frown")
-        +btn-emo("btn-outline-warning", "fa-meh")
-        +btn-emo("btn-outline-success", "fa-smile")
+        div
+            +btn-emo("btn-outline-danger", "fa-frown")
+            +btn-emo("btn-outline-warning", "fa-meh")
+            +btn-emo("btn-outline-success", "fa-smile")
+        .mt-3.feedback-prompt
+            .button.btn.btn-primary(onclick="Intercom('showNewMessage')") Care to tell us why?
 
 mixin control
     .list-group-item.text-center.bg-light
@@ -80,9 +83,3 @@ html
                             div !{jobad.JobTitle}
                             div !{jobad.Company}
     +intercom()
-    script.
-        function trigger() {
-            console.log("This works!");
-            //- Intercom('boot', {app_id: 'o7zrfpg6',Environment: 'SRP', custom_launcher_selector: '#my_custom_link'});
-            Intercom('showNewMessage');
-        }
