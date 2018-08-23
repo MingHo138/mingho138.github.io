@@ -9,6 +9,7 @@ $base-grid: 4px;
 $highlight-bg: #E0F0FA;
 $blue-link: #0f2c55;
 $blue-border: #94C9E0;
+$blue-bg: #EEF8FC;
 
 @import url('https://fonts.googleapis.com/css?family=Muli');
 
@@ -134,7 +135,7 @@ body {
   position: fixed;
   right: $base-grid * 5;
   bottom: $base-grid * 5;
-  background: $bg-brand;
+  background: $blue-bg;
   border-radius: 50%;
   color: white;
   padding: $base-grid * 3;
@@ -142,6 +143,6 @@ body {
   transition: background .3s;
   &:hover {
     cursor: pointer;
-    background: darken($bg-brand, 10%);
+    background: darken($blue-bg, 10%);
   }
 }

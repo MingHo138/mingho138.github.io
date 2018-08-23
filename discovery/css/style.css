@@ -110,7 +110,7 @@ body {
   position: fixed;
   right: 20px;
   bottom: 20px;
-  background: #0E2956;
+  background: #EEF8FC;
   border-radius: 50%;
   color: white;
   padding: 12px;
@@ -120,4 +120,4 @@ body {
   transition: background .3s; }
   .intercom-launcher:hover {
     cursor: pointer;
-    background: #07142a; }
+    background: #c3e6f4; }

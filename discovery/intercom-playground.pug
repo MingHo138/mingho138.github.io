@@ -3,6 +3,34 @@ include data/jobdetail.pug
 
 - var jobCount = 0
 
+mixin iconFeedback
+    svg(viewbox='0 0 24 24', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink' style="width: 26px;")
+        defs
+            lineargradient#a(x1='0%', y1='50%', y2='50%')
+                stop(stop-color='#73A4F2', offset='0%')
+                stop(stop-color='#9BC2FF', offset='100%')
+            path#b(d='M0 0h20c1.1046 0 2 .8954 2 2v13.5L0 0z')
+        g(fill='none', fill-rule='evenodd')
+            g(transform='translate(3.1304 3.3913)', fill='#FFF', fill-rule='nonzero')
+                rect(width='17.7391', height='2.087', rx='1.0435')
+                rect(y='8.6087', width='17.7391', height='2.087', rx='1.0435')
+                rect(y='4.1739', width='12', height='2.087', rx='1.0435')
+            rect(fill='#9BC2FF', fill-rule='nonzero', width='24', height='17.5', rx='2')
+            circle(fill='url(#a)', fill-rule='nonzero', cx='2.6087', cy='21.3913', r='2.6087')
+            g(transform='translate(3.1304 3.3913)', fill='#FFF', fill-rule='nonzero')
+                rect(width='17.7391', height='2.087', rx='1.0435')
+                rect(y='8.6087', width='17.7391', height='2.087', rx='1.0435')
+                rect(y='4.1739', width='12', height='2.087', rx='1.0435')
+            path(d='M22 17.5H2c-1.1046 0-2-.8954-2-2V2l22 15.5z', fill='#72A4F3', fill-rule='nonzero')
+            g(transform='translate(0 2)')
+                mask#c(fill='#fff')
+                    use(xlink:href='#b')
+                g(opacity='.8', mask='url(#c)')
+                    g(transform='translate(3.1304 1.3913)', fill='#FFF', fill-rule='nonzero')
+                        rect(width='17.7391', height='2.087', rx='1.0435')
+                        rect(y='8.6087', width='17.7391', height='2.087', rx='1.0435')
+                        rect(y='4.1739', width='12', height='2.087', rx='1.0435')
+
 mixin intercom
     script.
         //- function detectmob() { 
@@ -70,7 +98,9 @@ html
     .container.mt-3.mb-3
         h1 Intercom playground
         .intercom-launcher.d-none.d-xl-block
-            i.fa.fa-2x.fa-comments
+            //- i.fa.fa-2x.fa-comments
+            +iconFeedback
+            
         .list-group
             each jobad, index in jobdetail
                 if index <= 10
