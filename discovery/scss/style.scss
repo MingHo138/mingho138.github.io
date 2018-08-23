@@ -130,3 +130,18 @@ body {
   background: #fff;
   border-top: $grey-border 1px solid;
 }
+.intercom-launcher {
+  position: fixed;
+  right: $base-grid * 5;
+  bottom: $base-grid * 5;
+  background: $bg-brand;
+  border-radius: 50%;
+  color: white;
+  padding: $base-grid * 3;
+  z-index: 10;
+  transition: background .3s;
+  &:hover {
+    cursor: pointer;
+    background: darken($bg-brand, 10%);
+  }
+}
