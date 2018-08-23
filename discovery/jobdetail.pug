@@ -2,9 +2,22 @@ include data/jobdetail.pug
 include component/header.pug
 include component/preview-elements.pug
 
-html
+html.smooth-scroll
   head
     +header('Job Detail Page')
   body.bg-grey
+    .jdp-header.d-block.d-sm-none.header-hide
+      .p-2.text-primary < Back
     .container.mt-3.mb-3
       +preview(jobdetail[2], 'standalone')
+    script.
+      const jdpHeader = document.querySelector(".jdp-header")
+      const keyInfo = document.querySelector("#keyInfo")
+      window.addEventListener("scroll", (e) => {
+        let titleVisible;
+        if (checkVisible(keyInfo)) {
+          jdpHeader.classList.add('header-hide')
+        } else {
+          jdpHeader.classList.remove('header-hide')
+        }
+      })

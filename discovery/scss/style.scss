@@ -146,3 +146,21 @@ body {
     background: lighten($blue-link, 10%);
   }
 }
+
+.jdp-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: #ffffff;
+  border-bottom: $grey-border 1px solid;
+  z-index: 10;
+  transition: top .2s ease-out;
+  &.header-hide {
+    top: -46px;
+  }
+}
+
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
