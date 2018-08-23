@@ -135,14 +135,14 @@ body {
   position: fixed;
   right: $base-grid * 5;
   bottom: $base-grid * 5;
-  background: $blue-bg;
+  background: $blue-link;
   border-radius: 50%;
   color: white;
-  padding: $base-grid * 3;
+  padding: $base-grid * 4;
   z-index: 10;
   transition: background .3s;
   &:hover {
     cursor: pointer;
-    background: darken($blue-bg, 10%);
+    background: lighten($blue-link, 10%);
   }
 }
