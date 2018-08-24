@@ -4,14 +4,14 @@ include component/preview-elements.pug
 
 mixin jdp-header(jobad)
   .jdp-header.d-block.d-sm-none.header-hide
-    .p-2.d-flex(style="align-items: center; justify-content: center;")
+    .p-2.d-flex.flex-align-vertical
       .text-primary(style="width: 30px;")
         i.fa.fa-chevron-left
       .text-center(style="flex-grow: 1; margin-left: -30px") !{jobad.JobTitle}
 
 
 mixin jdp-action-bar
-  .jdp-action-bar.d-block.d-sm-none.d-flex
+  .jdp-action-bar.d-block.d-sm-none.d-flex.action-hide.flex-align-vertical
     div(style="flex-grow: 1")
       button.btn.btn-primary.btn-block Apply
     .text-center(style="width: 50px;")
@@ -21,6 +21,7 @@ html.smooth-scroll
   head
     +header('Job Detail Page')
   body.bg-grey
+    //- sticky header with back button and job title
     +jdp-header(jobdetail[2])
 
     //- content starts
@@ -28,16 +29,19 @@ html.smooth-scroll
       +preview(jobdetail[2], 'standalone')
     //- content ends
 
+    //- sticky action bar for apply and save
     +jdp-action-bar
 
     script.
       const jdpHeader = document.querySelector(".jdp-header")
+      const jdpAction = document.querySelector(".jdp-action-bar")
       const keyInfo = document.querySelector("#keyInfo")
       window.addEventListener("scroll", (e) => {
-        let titleVisible;
         if (checkVisible(keyInfo)) {
           jdpHeader.classList.add('header-hide')
+          jdpAction.classList.add('action-hide')
         } else {
           jdpHeader.classList.remove('header-hide')
+          jdpAction.classList.remove('action-hide')
         }
       })

@@ -155,6 +155,11 @@ body {
   padding: $base-grid * 2;
   background: #ffffff;
   border-top: $grey-border 1px solid;
+  transition: bottom .5s ease-in;
+  transition-delay: .2s;
+  &.action-hide {
+    bottom: -55px;
+  }
 }
 .jdp-header {
   position: fixed;
@@ -171,4 +176,8 @@ body {
 }
 .smooth-scroll {
   scroll-behavior: smooth;
+}
+.flex-align-vertical {
+  align-items: center; 
+  justify-content: center;
 }
