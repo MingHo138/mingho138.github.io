@@ -155,8 +155,7 @@ body {
   padding: $base-grid * 2;
   background: #ffffff;
   border-top: $grey-border 1px solid;
-  transition: bottom .5s ease-in;
-  transition-delay: .2s;
+  transition: bottom .3s ease-in;
   &.action-hide {
     bottom: -55px;
   }
@@ -169,7 +168,8 @@ body {
   background: #ffffff;
   border-bottom: $grey-border 1px solid;
   z-index: 10;
-  transition: top .2s ease-out;
+  transition: top .3s ease-out;
+  transition-delay: .5s;
   &.header-hide {
     top: -46px;
   }
@@ -180,4 +180,7 @@ body {
 .flex-align-vertical {
   align-items: center; 
   justify-content: center;
+}
+.header-logo-bar {
+  background: white;
 }

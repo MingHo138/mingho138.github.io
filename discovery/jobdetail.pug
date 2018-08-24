@@ -1,6 +1,7 @@
 include data/jobdetail.pug
 include component/header.pug
 include component/preview-elements.pug
+include component/logo-jobsdb.pug
 
 mixin jdp-header(jobad)
   .jdp-header.d-block.d-sm-none.header-hide
@@ -20,7 +21,10 @@ html.smooth-scroll
   head
     +header('Job Detail Page')
   body.bg-grey
-    h3.text-center JobsDB Logo
+    .header-logo-bar
+      h3.text-center
+        .text-center.p-2(style="width: 50%; margin: 0 auto")
+          +logoDB()
     //- sticky header with back button and job title
     +jdp-header(jobdetail[2])
 
