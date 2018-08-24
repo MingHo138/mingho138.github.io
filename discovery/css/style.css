@@ -129,7 +129,8 @@ body {
   left: 0;
   right: 0;
   padding: 8px;
-  background: #ffffff; }
+  background: #ffffff;
+  border-top: #ccc 1px solid; }
 
 .jdp-header {
   position: fixed;

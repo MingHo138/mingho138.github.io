@@ -154,6 +154,7 @@ body {
   right: 0;
   padding: $base-grid * 2;
   background: #ffffff;
+  border-top: $grey-border 1px solid;
 }
 .jdp-header {
   position: fixed;

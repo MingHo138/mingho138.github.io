@@ -15,7 +15,10 @@
   </head>
   <body class="bg-grey">
     <div class="jdp-header d-block d-sm-none header-hide">
-      <div class="p-2 text-primary">< Back</div>
+      <div class="p-2 d-flex" style="align-items: center; justify-content: center;">
+        <div class="text-primary" style="width: 30px;"><i class="fa fa-chevron-left"></i></div>
+        <div class="text-center" style="flex-grow: 1; margin-left: -30px">Senior Accountant&#47; Accountant</div>
+      </div>
     </div>
     <div class="container mt-3 mb-3">
       <div class="preview-panel" id="100003006191888">
@@ -182,8 +185,11 @@
         </div>
       </div>
     </div>
-    <div class="jdp-action-bar d-block d-sm-none">
-      <button class="btn btn-primary btn-block">Apply</button>
+    <div class="jdp-action-bar d-block d-sm-none d-flex">
+      <div style="flex-grow: 1">
+        <button class="btn btn-primary btn-block">Apply</button>
+      </div>
+      <div class="text-center" style="width: 50px;"><i class="fa fa-2x fa-bookmark position-relative" style="right: -5px; opacity: .5"></i></div>
     </div>
     <script>
       const jdpHeader = document.querySelector(".jdp-header")
