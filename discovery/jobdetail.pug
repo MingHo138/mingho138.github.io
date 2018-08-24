@@ -4,10 +4,9 @@ include component/preview-elements.pug
 
 mixin jdp-header(jobad)
   .jdp-header.d-block.d-sm-none.header-hide
-    .p-2.d-flex.flex-align-vertical
-      .text-primary(style="width: 30px;")
-        i.fa.fa-chevron-left
-      .text-center(style="flex-grow: 1; margin-left: -30px") !{jobad.JobTitle}
+    .p-2.text-primary
+      i.fa.fa-chevron-left.mr-2
+      | Back to jobs
 
 
 mixin jdp-action-bar
@@ -21,6 +20,7 @@ html.smooth-scroll
   head
     +header('Job Detail Page')
   body.bg-grey
+    h3.text-center JobsDB Logo
     //- sticky header with back button and job title
     +jdp-header(jobdetail[2])
 
