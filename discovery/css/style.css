@@ -122,7 +122,6 @@ body {
     cursor: pointer;
     background: #174280; }
 
-<<<<<<< HEAD
 .jdp-action-bar {
   position: -webkit-sticky;
   position: sticky;
@@ -131,7 +130,7 @@ body {
   right: 0;
   padding: 8px;
   background: #ffffff; }
-=======
+
 .jdp-header {
   position: fixed;
   left: 0;
@@ -148,4 +147,3 @@ body {
 
 .smooth-scroll {
   scroll-behavior: smooth; }
->>>>>>> b51b9328b26534412887df005bd0f54db7702671
