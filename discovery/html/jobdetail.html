@@ -1,5 +1,5 @@
 
-<html>
+<html class="smooth-scroll">
   <head>
     <head>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
@@ -14,13 +14,16 @@
     </head>
   </head>
   <body class="bg-grey">
+    <div class="jdp-header d-block d-sm-none header-hide">
+      <div class="p-2 text-primary">< Back</div>
+    </div>
     <div class="container mt-3 mb-3">
       <div class="preview-panel" id="100003006191888">
         <div class="mb-2 text-center position-relative" style="overflow: hidden; border: 5px solid #ed1b25"><img src="https://content.jobsdbcdn.com/Content/CmsContent/Logo/HK/JobsDBFiles/CompanyLogo/banner-m/23588m.JPG" style="opacity:0"/>
           <div class="display-banner"><img src="https://content.jobsdbcdn.com/Content/CmsContent/Logo/HK/JobsDBFiles/CompanyLogo/banner-m/23588m.JPG"/></div>
           <div class="bg-banner" style="background-image: url(&quot;https://content.jobsdbcdn.com/Content/CmsContent/Logo/HK/JobsDBFiles/CompanyLogo/banner-m/23588m.JPG&quot;)"></div>
         </div>
-        <div class="card mb-3">
+        <div class="card mb-3" id="keyInfo">
           <div class="card-body">
             <div class="row">
               <div class="col">
@@ -179,8 +182,23 @@
         </div>
       </div>
     </div>
+<<<<<<< HEAD
     <div class="jdp-action-bar">
       <button class="btn btn-primary btn-block">Apply</button>
     </div>
+=======
+    <script>
+      const jdpHeader = document.querySelector(".jdp-header")
+      const keyInfo = document.querySelector("#keyInfo")
+      window.addEventListener("scroll", (e) => {
+        let titleVisible;
+        if (checkVisible(keyInfo)) {
+          jdpHeader.classList.add('header-hide')
+        } else {
+          jdpHeader.classList.remove('header-hide')
+        }
+      })
+    </script>
+>>>>>>> b51b9328b26534412887df005bd0f54db7702671
   </body>
 </html>

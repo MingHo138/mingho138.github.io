@@ -25,3 +25,13 @@ const init = () => {
 const toggleFilter = () => {
     $('#filters').slideToggle('fast');
 }
+
+const checkVisible = (el) => {
+    let elVislble = true;
+    if(el.getBoundingClientRect().bottom <= 0) {
+        elVislble = false
+    } else {
+        elVislble = true
+    }
+    return elVislble
+}
