@@ -146,3 +146,12 @@ body {
     background: lighten($blue-link, 10%);
   }
 }
+
+.jdp-action-bar {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: $base-grid * 2;
+  background: #ffffff;
+}
