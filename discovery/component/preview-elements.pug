@@ -20,16 +20,23 @@ mixin preview(jobad, layout)
             //-   .col-2(style="position:relative; max-width: 150px;")
             //-     img(src=jobad.CompanyLogo style="position: absolute; top: 25%; left: 20%")
             div !{jobad.Company}
-      .card-footer
-        .mr-4.d-inline-block
-          i.fa.fa-dollar-sign.fa-fw.mr-1
-          span !{jobad.Salary}
-        .mr-4.d-inline-block 
-          i.fa.fa-map-marker-alt.fa-fw.mr-1
-          span !{jobad.Location}
-        .mr-4.d-inline-block 
-          i.fa.fa-fw.fa-calendar-alt.mr-1
-          span Expires in !{expireDate} days
+        .mt-3
+          .mr-4.d-inline-block
+            i.fa.fa-dollar-sign.fa-fw.mr-1
+            span !{jobad.Salary}
+          .mr-4.d-inline-block 
+            i.fa.fa-map-marker-alt.fa-fw.mr-1
+            span !{jobad.Location}
+          .mr-4.d-inline-block 
+            i.fa.fa-fw.fa-calendar-alt.mr-1
+            span Expires in !{expireDate} days
+        if layout == 'standalone'
+          .mt-3
+            .d-flex.flex-align-vertical
+              div(style="flex-grow: 1")
+                button.btn.btn-primary.btn-block Apply
+              .text-center(style="width: 50px;")
+                i.fa.fa-2x.fa-bookmark.position-relative(style="right: -5px; opacity: .5")
     .mb-3.d-md-none
       .row
         .col

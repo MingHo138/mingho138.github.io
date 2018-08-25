@@ -147,6 +147,19 @@ body {
   }
 }
 
+.jdp-action-bar {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: $base-grid * 2;
+  background: #ffffff;
+  border-top: $grey-border 1px solid;
+  transition: bottom .3s ease-in;
+  &.action-hide {
+    bottom: -55px;
+  }
+}
 .jdp-header {
   position: fixed;
   left: 0;
@@ -155,12 +168,19 @@ body {
   background: #ffffff;
   border-bottom: $grey-border 1px solid;
   z-index: 10;
-  transition: top .2s ease-out;
+  transition: top .3s ease-out;
+  transition-delay: .5s;
   &.header-hide {
     top: -46px;
   }
 }
-
 .smooth-scroll {
   scroll-behavior: smooth;
+}
+.flex-align-vertical {
+  align-items: center; 
+  justify-content: center;
+}
+.header-logo-bar {
+  background: white;
 }

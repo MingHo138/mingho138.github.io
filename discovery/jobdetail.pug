@@ -1,23 +1,51 @@
 include data/jobdetail.pug
 include component/header.pug
 include component/preview-elements.pug
+include component/logo-jobsdb.pug
+
+mixin jdp-header(jobad)
+  .jdp-header.d-block.d-sm-none.header-hide
+    .p-2.text-primary
+      i.fa.fa-chevron-left.mr-2
+      | Back to jobs
+
+
+mixin jdp-action-bar
+  .jdp-action-bar.d-block.d-sm-none.d-flex.action-hide.flex-align-vertical
+    div(style="flex-grow: 1")
+      button.btn.btn-primary.btn-block Apply
+    .text-center(style="width: 50px;")
+      i.fa.fa-2x.fa-bookmark.position-relative(style="right: -5px; opacity: .5")
 
 html.smooth-scroll
   head
     +header('Job Detail Page')
   body.bg-grey
-    .jdp-header.d-block.d-sm-none.header-hide
-      .p-2.text-primary < Back
+    .header-logo-bar
+      h3.text-center
+        .text-center.p-2(style="width: 50%; margin: 0 auto")
+          +logoDB()
+    //- sticky header with back button and job title
+    +jdp-header(jobdetail[2])
+
+    //- content starts
     .container.mt-3.mb-3
       +preview(jobdetail[2], 'standalone')
+    //- content ends
+
+    //- sticky action bar for apply and save
+    +jdp-action-bar
+
     script.
       const jdpHeader = document.querySelector(".jdp-header")
+      const jdpAction = document.querySelector(".jdp-action-bar")
       const keyInfo = document.querySelector("#keyInfo")
       window.addEventListener("scroll", (e) => {
-        let titleVisible;
         if (checkVisible(keyInfo)) {
           jdpHeader.classList.add('header-hide')
+          jdpAction.classList.add('action-hide')
         } else {
           jdpHeader.classList.remove('header-hide')
+          jdpAction.classList.remove('action-hide')
         }
       })
