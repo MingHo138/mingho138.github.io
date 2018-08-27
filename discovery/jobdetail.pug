@@ -5,7 +5,7 @@ include component/logo-jobsdb.pug
 
 mixin jdp-header(jobad)
   .jdp-header.d-block.d-sm-none.header-hide
-    .p-2.text-primary
+    .text-primary
       i.fa.fa-chevron-left.mr-2
       | Back to jobs
 
@@ -15,7 +15,7 @@ mixin jdp-action-bar
     div(style="flex-grow: 1")
       button.btn.btn-primary.btn-block Apply
     .text-center(style="width: 50px;")
-      i.fa.fa-2x.fa-bookmark.position-relative(style="right: -5px; opacity: .5")
+      i.btn-bookmark.fa.fa-2x.fa-bookmark.position-relative(style="right: -5px" onclick="toggleBookmark(event)")
 
 html.smooth-scroll
   head
@@ -23,14 +23,14 @@ html.smooth-scroll
   body.bg-grey
     .header-logo-bar
       h3.text-center
-        .text-center.p-2(style="width: 50%; margin: 0 auto")
+        .text-center.p-2(style="width: 160px; margin: 0 auto")
           +logoDB()
     //- sticky header with back button and job title
-    +jdp-header(jobdetail[2])
+    +jdp-header(jobdetail[4])
 
     //- content starts
     .container.mt-3.mb-3
-      +preview(jobdetail[2], 'standalone')
+      +preview(jobdetail[4], 'standalone')
     //- content ends
 
     //- sticky action bar for apply and save
@@ -40,6 +40,8 @@ html.smooth-scroll
       const jdpHeader = document.querySelector(".jdp-header")
       const jdpAction = document.querySelector(".jdp-action-bar")
       const keyInfo = document.querySelector("#keyInfo")
+      const btnBookmark = document.querySelector(".btn-bookmark")
+
       window.addEventListener("scroll", (e) => {
         if (checkVisible(keyInfo)) {
           jdpHeader.classList.add('header-hide')
@@ -49,3 +51,8 @@ html.smooth-scroll
           jdpAction.classList.remove('action-hide')
         }
       })
+
+      const toggleBookmark = (e) => {
+        //- console.log("It works", e.target)
+        e.target.classList.toggle('active')
+      }

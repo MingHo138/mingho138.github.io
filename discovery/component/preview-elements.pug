@@ -11,14 +11,15 @@ mixin preview(jobad, layout)
         if layout == 'standalone'
           .bg-banner(style="background-image: url(\"" + jobad.AdBanner + "\")")
     //- key info
-    .card.mb-3#keyInfo
-      .card-body
+    .card.mb-3#keyInfo.position-relative
+      //- display company logo in standalone job ad
+      if jobad.CompanyLogo && layout == 'standalone'
+        .jdp-logo.d-flex.flex-align-vertical.border.mt-3.p-3
+          img(src=jobad.CompanyLogo)
+      .card-body(class=`${ jobad.CompanyLogo ? 'pt-5': ''}`)
         .row
           .col
             h4 !{jobad.JobTitle}
-            //- if jobad.CompanyLogo
-            //-   .col-2(style="position:relative; max-width: 150px;")
-            //-     img(src=jobad.CompanyLogo style="position: absolute; top: 25%; left: 20%")
             div !{jobad.Company}
         .mt-3
           .mr-4.d-inline-block
@@ -36,7 +37,7 @@ mixin preview(jobad, layout)
               div(style="flex-grow: 1")
                 button.btn.btn-primary.btn-block Apply
               .text-center(style="width: 50px;")
-                i.fa.fa-2x.fa-bookmark.position-relative(style="right: -5px; opacity: .5")
+                i.btn-bookmark.fa.fa-2x.fa-bookmark.position-relative(style="right: -5px;" onclick="toggleBookmark(event)")
     .mb-3.d-md-none
       .row
         .col

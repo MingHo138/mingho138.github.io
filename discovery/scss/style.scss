@@ -10,6 +10,10 @@ $highlight-bg: #E0F0FA;
 $blue-link: #0f2c55;
 $blue-border: #94C9E0;
 $blue-bg: #EEF8FC;
+$grey-4: #cccccc;
+$grey-2: #666666;
+$grey-6: #f8f8fa;
+$blue-2: #298EB9;
 
 @import url('https://fonts.googleapis.com/css?family=Muli');
 
@@ -149,29 +153,32 @@ body {
 
 .jdp-action-bar {
   position: sticky;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   right: 0;
   padding: $base-grid * 2;
   background: #ffffff;
-  border-top: $grey-border 1px solid;
-  transition: bottom .3s ease-in;
+  box-shadow: $grey-4 0 -1px 5px;
+  transition: all .3s ease-out;
   &.action-hide {
     bottom: -55px;
+    box-shadow: none;
   }
 }
 .jdp-header {
   position: fixed;
+  padding: $base-grid*3;
   left: 0;
   right: 0;
-  top: 0;
-  background: #ffffff;
-  border-bottom: $grey-border 1px solid;
+  top: -1px;
+  background: $grey-6;
+  box-shadow: $grey-4 0 1px 5px;
   z-index: 10;
-  transition: top .3s ease-out;
+  transition: top .4s ease-out;
   transition-delay: .5s;
   &.header-hide {
     top: -46px;
+    box-shadow: none;
   }
 }
 .smooth-scroll {
@@ -183,4 +190,25 @@ body {
 }
 .header-logo-bar {
   background: white;
+}
+.btn-bookmark {
+  color: $grey-4;
+  transition: color .3s ease;
+  &:hover {
+    cursor: pointer;
+    color: darken($grey-4, 10%)
+  }
+  &.active {
+    color: $blue-2;
+  }
+}
+
+.jdp-logo {
+  width: 120px; 
+  position: absolute; 
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  z-index: 5;
 }
