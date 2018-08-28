@@ -166,11 +166,12 @@ body {
   }
 }
 .jdp-header {
-  position: fixed;
-  padding: $base-grid*3;
-  left: 0;
-  right: 0;
+  position: sticky;
+  // position: fixed;
+  // left: 0;
+  // right: 0;
   top: -1px;
+  padding: $base-grid*3;
   background: $grey-6;
   box-shadow: $grey-4 0 1px 5px;
   z-index: 10;
@@ -211,4 +212,5 @@ body {
   transform: translateX(-50%);
   background: #fff;
   z-index: 5;
+  box-shadow: $grey-4 0 1px 5px;
 }

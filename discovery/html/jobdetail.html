@@ -30,9 +30,7 @@
         </div>
       </h3>
     </div>
-    <div class="jdp-header d-block d-sm-none header-hide">
-      <div class="text-primary"><i class="fa fa-chevron-left mr-2"></i>Back to jobs</div>
-    </div>
+    <div class="jdp-header d-block d-sm-none"><a class="text-primary" href="srp-preview-container.html"><i class="fa fa-chevron-left mr-2"></i>Back to jobs</a></div>
     <div class="container mt-3 mb-3">
       <div class="preview-panel" id="100003006201810">
         <div class="mb-2 text-center position-relative" style="overflow: hidden; border: 5px solid #000000"><img src="https://content.jobsdbcdn.com/Content/CmsContent/Logo/HK/JobsDBFiles/CompanyLogo/banner-m/22058m.jpg" style="opacity:0"/>
@@ -221,10 +219,10 @@
       
       window.addEventListener("scroll", (e) => {
         if (checkVisible(keyInfo)) {
-          jdpHeader.classList.add('header-hide')
+          //- jdpHeader.classList.add('header-hide')
           jdpAction.classList.add('action-hide')
         } else {
-          jdpHeader.classList.remove('header-hide')
+          //- jdpHeader.classList.remove('header-hide')
           jdpAction.classList.remove('action-hide')
         }
       })

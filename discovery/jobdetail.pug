@@ -4,8 +4,8 @@ include component/preview-elements.pug
 include component/logo-jobsdb.pug
 
 mixin jdp-header(jobad)
-  .jdp-header.d-block.d-sm-none.header-hide
-    .text-primary
+  .jdp-header.d-block.d-sm-none
+    a.text-primary(href="srp-preview-container.html")
       i.fa.fa-chevron-left.mr-2
       | Back to jobs
 
@@ -44,10 +44,10 @@ html.smooth-scroll
 
       window.addEventListener("scroll", (e) => {
         if (checkVisible(keyInfo)) {
-          jdpHeader.classList.add('header-hide')
+          //- jdpHeader.classList.add('header-hide')
           jdpAction.classList.add('action-hide')
         } else {
-          jdpHeader.classList.remove('header-hide')
+          //- jdpHeader.classList.remove('header-hide')
           jdpAction.classList.remove('action-hide')
         }
       })
