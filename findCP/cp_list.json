@@ -7,7 +7,7 @@
         "chLastName": "",
         "doctor": false,
         "language": [],
-        "clintele": [],
+        "clientele": [],
         "serviceArea": [],
         "practice": [
             {
@@ -17,6 +17,110 @@
                 "address": "",
                 "tel": "",
                 "fax": ""
+            }
+        ],
+        "website": "",
+        "email": "",
+        "profileImg": ""
+    },
+    {
+        "enFirstName": "Hoe Chi",
+        "enLastName": "Au",
+        "enNickName": "Angel",
+        "chFirstName": "浩慈",
+        "chLastName": "區",
+        "doctor": true,
+        "language": ["cantonese", "english"],
+        "clientele": ["child", "adolescent", "adult"],
+        "serviceArea": ["assessment", "treatment", "consultation"],
+        "practice": [
+            {
+                "name": "Angel Au Developmental Consultancy",
+                "area": "Hong Kong",
+                "district": "Quarry Bay",
+                "address": "7/F, 633 King’s Road, Quarry Bay, Hong Kong",
+                "tel": "23191433",
+                "fax": "29824403"
+            },
+            {
+                "name": "Autism Partnership",
+                "area": "",
+                "district": "",
+                "address": "",
+                "tel": "25263812",
+                "fax": "29824403"
+            }
+        ],
+        "website": "http://www.autismpartnership.com.hk/en/",
+        "email": "",
+        "profileImg": "http://www.autismpartnership.com.hk/wp-content/uploads/angel-1024x1024.jpg"
+    },
+    {
+        "enFirstName": "Melanie",
+        "enLastName": "Bryan",
+        "enNickName": "Melanie",
+        "chFirstName": "",
+        "chLastName": "",
+        "doctor": true,
+        "language": ["english"],
+        "clientele": ["child", "adolescent", "adult", "couples", "families", "older adults"],
+        "serviceArea": ["treatment", "hypnotherapy", "coaching"],
+        "practice": [
+            {
+                "name": "MINDMATTERS Ltd",
+                "area": "Hong Kong",
+                "district": "Mid levels",
+                "address": "G/F, Donnell Court, 50 MacDonnell Road, Midlevels, Hong Kong",
+                "tel": "25757707",
+                "fax": "25751513"
+            }
+        ],
+        "website": "https://www.mindmatters.hk/",
+        "email": "drmelanie@mindmatters.hk",
+        "profileImg": "https://mindmatters.hk/wp-content/uploads/2017/12/melanie-1.png"
+    },
+    {
+        "enFirstName": "Chee Ping",
+        "enLastName": "Chan",
+        "enNickName": "Jeanie",
+        "chFirstName": "子平",
+        "chLastName": "陳",
+        "doctor": false,
+        "language": ["cantonese", "english"],
+        "clientele": ["child", "adolescent", "adult", "couples", "families", "older adults"],
+        "serviceArea": ["assessment", "treatment", "consultation"],
+        "practice": [
+            {
+                "name": "T.H.E Centre Psychological Practice",
+                "area": "Kowloon",
+                "district": "Jordan",
+                "address": "Rm1301, 8 Jordan, Kowloon (MTR Jordan Station Exit B)",
+                "tel": "27023038",
+                "fax": "26977000"
+            }
+        ],
+        "website": "http://www.thecenterpsy.com/",
+        "email": "info@thecenterpsy.com",
+        "profileImg": ""
+    },
+    {
+        "enFirstName": "",
+        "enLastName": "Chan",
+        "enNickName": "Cindy",
+        "chFirstName": "皓宜",
+        "chLastName": "陳",
+        "doctor": true,
+        "language": ["cantonese", "putonghua", "english"],
+        "clientele": ["child", "adolescent", "adult", "couples", "older adults"],
+        "serviceArea": ["assessment", "treatment", "consultation", "forensic"],
+        "practice": [
+            {
+                "name": "Cindy Chan Psychological Services",
+                "area": "Hong Kong",
+                "district": "Central",
+                "address": "6/F, New York House, 60 Connaught Road Central, Central, Hong Kong",
+                "tel": "31602933",
+                "fax": "23366341"
             }
         ],
         "website": "",
