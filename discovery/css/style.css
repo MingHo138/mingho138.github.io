@@ -125,34 +125,40 @@ body {
 .jdp-action-bar {
   position: -webkit-sticky;
   position: sticky;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   right: 0;
   padding: 8px;
   background: #ffffff;
-  border-top: #ccc 1px solid;
-  -webkit-transition: bottom .3s ease-in;
-  -o-transition: bottom .3s ease-in;
-  transition: bottom .3s ease-in; }
+  -webkit-box-shadow: #cccccc 0 -1px 5px;
+  box-shadow: #cccccc 0 -1px 5px;
+  -webkit-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out; }
   .jdp-action-bar.action-hide {
-    bottom: -55px; }
+    bottom: -55px;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
 
 .jdp-header {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  background: #ffffff;
-  border-bottom: #ccc 1px solid;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+  padding: 12px;
+  background: #f8f8fa;
+  -webkit-box-shadow: #cccccc 0 1px 5px;
+  box-shadow: #cccccc 0 1px 5px;
   z-index: 10;
-  -webkit-transition: top .3s ease-out;
-  -o-transition: top .3s ease-out;
-  transition: top .3s ease-out;
+  -webkit-transition: top .4s ease-out;
+  -o-transition: top .4s ease-out;
+  transition: top .4s ease-out;
   -webkit-transition-delay: .5s;
   -o-transition-delay: .5s;
   transition-delay: .5s; }
   .jdp-header.header-hide {
-    top: -46px; }
+    top: -46px;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
 
 .smooth-scroll {
   scroll-behavior: smooth; }
@@ -167,3 +173,27 @@ body {
 
 .header-logo-bar {
   background: white; }
+
+.btn-bookmark {
+  color: #cccccc;
+  -webkit-transition: color .3s ease;
+  -o-transition: color .3s ease;
+  transition: color .3s ease; }
+  .btn-bookmark:hover {
+    cursor: pointer;
+    color: #b3b3b3; }
+  .btn-bookmark.active {
+    color: #298EB9; }
+
+.jdp-logo {
+  width: 120px;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: #fff;
+  z-index: 5;
+  -webkit-box-shadow: #cccccc 0 1px 5px;
+  box-shadow: #cccccc 0 1px 5px; }
