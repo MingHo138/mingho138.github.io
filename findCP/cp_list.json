@@ -1,0 +1,26 @@
+[
+    {
+        "enFirstName": "",
+        "enLastName": "",
+        "enNickName": "",
+        "chFirstName": "",
+        "chLastName": "",
+        "doctor": false,
+        "language": [],
+        "clintele": [],
+        "serviceArea": [],
+        "practice": [
+            {
+                "name": "",
+                "area": "",
+                "district": "",
+                "address": "",
+                "tel": "",
+                "fax": ""
+            }
+        ],
+        "website": "",
+        "email": "",
+        "profileImg": ""
+    }
+]
