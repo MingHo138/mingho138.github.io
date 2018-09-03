@@ -123,8 +123,73 @@
                 "fax": "23366341"
             }
         ],
+        "website": "http://www.ccps.com.hk/",
+        "email": "",
+        "profileImg": "http://www.ccps.com.hk/Public/Home/images/photo.jpg"
+    },
+    {
+        "enFirstName": "Hing Moon",
+        "enLastName": "Chan",
+        "enNickName": "Tommy",
+        "chFirstName": "慶滿",
+        "chLastName": "陳",
+        "doctor": true,
+        "language": ["cantonese", "putonghua", "english"],
+        "clientele": ["child", "adolescent", "adult", "couples", "families", "older adults"],
+        "serviceArea": ["assessment", "treatment", "consultation", "forensic"],
+        "practice": [
+            {
+                "name": "Matilda International Hospital and Medical Centres",
+                "area": "Hong Kong",
+                "district": "Central",
+                "address": "Suite 502, Prosperity Tower, 39 Queen's Rd. Central, HK",
+                "tel": "36924890",
+                "fax": "25378500"
+            },
+            {
+                "name": "",
+                "area": "Kowloon",
+                "district": "Tsim Sha Tsui",
+                "address": "Suite 1215, Ocean Centre, Harbour City, 5 Canton Rd. TST",
+                "tel": "39227500",
+                "fax": ""
+            },
+            {
+                "name": "",
+                "area": "Hong Kong",
+                "district": "The Peak",
+                "address": "41 Mount Kellett Rd. The Peak, HK",
+                "tel": "28490111",
+                "fax": ""
+            }
+        ],
+        "website": "http://www.drtommychan.iyp.hk",
+        "email": "tommyhmchan@gmail.com",
+        "profileImg": "http://ypsilver.yp.com.hk/ypdiy/Member/8067/gallery/8067P1New03.jpg"
+    },
+    {
+        "enFirstName": "Ka Wing",
+        "enLastName": "Chan",
+        "enNickName": "Patricia",
+        "chFirstName": "嘉詠",
+        "chLastName": "陳",
+        "doctor": false,
+        "language": ["cantonese", "putonghua", "english"],
+        "clientele": ["adolescent", "adult", "families"],
+        "serviceArea": ["assessment", "treatment", "consultation"],
+        "serviceAreadAdditional": ["staff training"],
+        "practice": [
+            {
+                "name": "Pat & Matthew Psychological Consultancy",
+                "area": "Kowloon",
+                "district": "Tsim Sha Tsui",
+                "address": "Unit 1001, 10/F, Miramar Tower, 132 Nathan Road, Tsimshatsui, Hong Kong",
+                "tel": "93109925",
+                "fax": ""
+            }
+        ],
         "website": "",
         "email": "",
         "profileImg": ""
-    }
+    },
 ]
