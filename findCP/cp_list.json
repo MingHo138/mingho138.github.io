@@ -192,4 +192,328 @@
         "email": "",
         "profileImg": ""
     },
+    {
+        "enFirstName": "Kit Bing",
+        "enLastName": "Chan",
+        "enNickName": "Sumee",
+        "chFirstName": "潔冰",
+        "chLastName": "陳",
+        "doctor": false,
+        "language": ["cantonese", "english"],
+        "clientele": ["child", "adolescent", "adult"],
+        "serviceArea": ["assessment", "treatment", "consultation"],
+        "serviceAreadAdditional": ["staff training"],
+        "practice": [
+            {
+                "name": "Sumee Chan Clinical Psychologist",
+                "area": "Hong Kong",
+                "district": "Sheung Wan",
+                "address": "Room 915, China Merchants Tower, Shun Tak Centre,168-200 Connaught Road Central, Sheung Wan, Hong Kong",
+                "tel": "28418863",
+                "fax": "28418806"
+            }
+        ],
+        "website": "",
+        "email": "",
+        "profileImg": ""
+    },
+    {
+        "enFirstName": "Mei Kwan",
+        "enLastName": "Chan",
+        "enNickName": "Mei Kwan",
+        "chFirstName": "美筠",
+        "chLastName": "陳",
+        "doctor": false,
+        "language": ["cantonese", "putonghua", "english"],
+        "clientele": ["child", "adolescent", "adult", "older adults"],
+        "serviceArea": ["assessment", "treatment"],
+        "practice": [
+            {
+                "name": "PTU Health Project Medical Centre",
+                "area": "Kowloon",
+                "district": "Mong Kok",
+                "address": "8/F, Good Hope Building, 618 Nathan Road, Mong Kok, Kowloon, Hong Kong",
+                "tel": "27822316",
+                "fax": ""
+            }
+        ],
+        "website": "http://www.hkptu.org/medical",
+        "email": "",
+        "profileImg": ""
+    },
+    {
+        "enFirstName": "Wing Chiu",
+        "enLastName": "Chan",
+        "enNickName": "Michelle",
+        "chFirstName": "穎昭",
+        "chLastName": "陳",
+        "doctor": true,
+        "language": ["cantonese", "english"],
+        "clientele": ["child", "adolescent", "adult", "older adults"],
+        "serviceArea": ["assessment", "treatment", "consultation"],
+        "practice": [
+            {
+                "name": "Alliance Holistic Care Center",
+                "area": "Kowloon",
+                "district": "Mong Kok",
+                "address": "Room 1205, 655 Nathan Road, Kowloon (Exit E1 Mong Kok MTR)",
+                "tel": "23970798",
+                "fax": "27873069"
+            },
+            {
+                "name": "Alliance Holistic Care Center",
+                "area": "Hong Kong",
+                "district": "Sheung Wan",
+                "address": "Room 2103, Alliance Building, 130-136 Connaught Road Central, Hong Kong (Exit C Sheung Wan MTR)",
+                "tel": "28155661",
+                "fax": "28152119"
+            }
+        ],
+        "website": "http://www.allianceholistic.com.hk/",
+        "email": "",
+        "profileImg": ""
+    },
+    {
+        "enFirstName": "Wing Yee",
+        "enLastName": "Chan",
+        "enNickName": "Michelle",
+        "chFirstName": "穎儀",
+        "chLastName": "陳",
+        "doctor": true,
+        "language": ["cantonese", "english"],
+        "clientele": ["child", "adolescent", "adult", "child", "families"],
+        "serviceArea": ["assessment", "treatment", "consultation"],
+        "practice": [
+            {
+                "name": "Union Hospital Clinical Psychology Services",
+                "area": "New Territories",
+                "district": "Tai Wai",
+                "address": "8/F, MIC, Main Building, Union Hospital, 18 Fu Kin Street, Tai Wai, Shatin",
+                "tel": "26083383",
+                "fax": ""
+            },
+            {
+                "name": "Mindflow Child & Family Psychological Development Clinic",
+                "area": "New Territories",
+                "district": "Shatin",
+                "address": "Unit 809-810, Floor 8, Tower 1, Grand Central Plaza, 138 Shatin Rural Area Committee Road, Shatin",
+                "tel": "25129388",
+                "fax": ""
+            },
+            {
+                "name": "Hong Kong Eating Disorders Association",
+                "area": "Hong Kong",
+                "district": "Sheung Wan",
+                "address": "Room 1501-02, 15/F, 69 Jervois Street, Sheung Wan, Hong Kong",
+                "tel": "31068472",
+                "fax": ""
+            }
+        ],
+        "website": "",
+        "email": "",
+        "profileImg": ""
+    },
+    {
+        "enFirstName": "Wong Shing",
+        "enLastName": "Chan",
+        "enNickName": "Wong Shing",
+        "chFirstName": "穩誠",
+        "chLastName": "陳",
+        "doctor": true,
+        "language": ["cantonese", "english"],
+        "clientele": ["child", "adolescent", "adult"],
+        "serviceArea": ["assessment", "treatment", "consultation"],
+        "practice": [
+            {
+                "name": "",
+                "area": "Hong Kong",
+                "district": "Central",
+                "address": "Unit 301, 3/F, Winway Building, 50 Wellington Street, Central, Hong Kong",
+                "tel": "25300020",
+                "fax": "25301077"
+            }
+        ],
+        "website": "",
+        "email": "",
+        "profileImg": ""
+    },
+    {
+        "enFirstName": "Yin Nei",
+        "enLastName": "Chan",
+        "enNickName": "Jenny",
+        "chFirstName": "燕妮",
+        "chLastName": "陳",
+        "doctor": false,
+        "language": ["cantonese", "putonghua", "english"],
+        "clientele": ["child", "adolescent", "adult", "couples", "families", "older adults"],
+        "serviceArea": ["assessment", "treatment", "consultation"],
+        "serviceAreadAdditional": ["mindfulness training"],
+        "practice": [
+            {
+                "name": "Breathe and Smile Mindbody Wellbeing Center",
+                "area": "Kowloon",
+                "district": "Sham Shui Po",
+                "address": "Rm A, 6/F, Happy Centre, 178-184 Cheung Sha Wan Road, Sham Shui Po, Kowloon, Hong Kong",
+                "tel": "23631112",
+                "fax": ""
+            }
+        ],
+        "website": "http://www.breathesmile.org",
+        "email": "info@breathesmile.org",
+        "profileImg": ""
+    },
+    {
+        "enFirstName": "Pui Han",
+        "enLastName": "Chao",
+        "enNickName": "Joyce",
+        "chFirstName": "佩嫻",
+        "chLastName": "周",
+        "doctor": true,
+        "language": ["cantonese", "putonghua", "english"],
+        "clientele": ["child", "adolescent"],
+        "serviceArea": ["assessment", "treatment", "consultation"],
+        "practice": [
+            {
+                "name": "Dimensions Center",
+                "area": "Hong Kong",
+                "district": "Central",
+                "address": "Rm1601, 16/F, 1 Duddell Street, Central, Hong Kong",
+                "tel": "",
+                "fax": ""
+            },
+            {
+                "name": "The London Medical Clinic",
+                "area": "Hong Kong",
+                "district": "Central",
+                "address": "9/F, 1 Duddell Street, Central, Hong Kong",
+                "tel": "27892297",
+                "fax": ""
+            }
+        ],
+        "website": "http://www.dimensionscenter.com",
+        "email": "",
+        "profileImg": ""
+    },
+    {
+        "enFirstName": "Pek Lon",
+        "enLastName": "Chau",
+        "enNickName": "Minna",
+        "chFirstName": "碧潾",
+        "chLastName": "周",
+        "doctor": false,
+        "language": ["cantonese", "putonghua", "english"],
+        "clientele": ["child", "adolescent"],
+        "serviceArea": ["assessment", "treatment", "consultation"],
+        "practice": [
+            {
+                "name": "Sprout in Motion",
+                "area": "Hong Kong",
+                "district": "Central",
+                "address": "G/F, 5A Chancery Lane, Central",
+                "tel": "25634138",
+                "fax": "25634238"
+            }
+        ],
+        "website": "http://www.dimensionscenter.com/",
+        "email": "",
+        "profileImg": ""
+    },
+    {
+        "enFirstName": "",
+        "enLastName": "Chen",
+        "enNickName": "Lawrence",
+        "chFirstName": "維樑",
+        "chLastName": "陳",
+        "doctor": true,
+        "language": ["cantonese", "putonghua", "shanghainese", "english"],
+        "clientele": ["child", "adolescent", "adult", "couples", "families", "older adults"],
+        "serviceArea": ["assessment", "treatment", "consultation"],
+        "practice": [
+            {
+                "name": "LC Professionals",
+                "area": "Hong Kong",
+                "district": "Admiralty",
+                "address": "Suite 2802, Lippo Centre Tower 2, 89 Queensway, Admiralty, Hong Kong",
+                "tel": "22952626",
+                "fax": ""
+            }
+        ],
+        "website": "http://www.lcprofessionals.com/index.html",
+        "email": "",
+        "profileImg": ""
+    },
+    {
+        "enFirstName": "Kin Wing",
+        "enLastName": "Cheng",
+        "enNickName": "Sammy",
+        "chFirstName": "健榮",
+        "chLastName": "鄭",
+        "doctor": true,
+        "language": ["cantonese", "putonghua", "english"],
+        "clientele": ["child", "adolescent", "adult", "couples", "families", "older adults"],
+        "serviceArea": ["assessment", "treatment", "consultation", "forensic"],
+        "practice": [
+            {
+                "name": "Dr. Sammy Cheng Psychological Services",
+                "area": "Hong Kong",
+                "district": "Central",
+                "address": "Suite 1201, SBI Centre, 54-58 Des Voeux Road, Central (MTR Exit C), Hong Kong",
+                "tel": "55791101",
+                "fax": "31950765"
+            }
+        ],
+        "website": "http://www.drsammycheng.com/",
+        "email": "drsammy.cp@gmail.com",
+        "facebook": "http://www.facebook.com/drsammychengpsychologicalservices",
+        "profileImg": ""
+    },
+    {
+        "enFirstName": "Mei Chun",
+        "enLastName": "Cheung",
+        "enNickName": "Mei Chun",
+        "chFirstName": "美珍",
+        "chLastName": "張",
+        "doctor": true,
+        "professor": true,
+        "language": ["cantonese", "english"],
+        "clientele": ["child", "adolescent", "adult", "older adults"],
+        "serviceArea": ["assessment", "treatment", "consultation"],
+        "practice": [
+            {
+                "name": "Pacificare",
+                "area": "Hong Kong",
+                "district": "Tsim Sha Tsui",
+                "address": "12/F, 26 Nathan Road, Tsimshatsui, Kowloon, Hong Kong",
+                "tel": "23661888",
+                "fax": "23664555"
+            }
+        ],
+        "website": "",
+        "email": "",
+        "profileImg": ""
+    },
+    {
+        "enFirstName": "Chun Hong",
+        "enLastName": "Chin",
+        "enNickName": "Edwin",
+        "chFirstName": "俊匡",
+        "chLastName": "錢",
+        "doctor": true,
+        "language": ["cantonese", "english"],
+        "clientele": ["child", "adolescent", "adult"],
+        "serviceArea": ["assessment", "treatment"],
+        "practice": [
+            {
+                "name": "Mindnlife",
+                "area": "Hong Kong",
+                "district": "Central",
+                "address": "Suite 1202, 12/F, Chinachem Hollywood Centre, 1-13 Hollywood Road, Central, Hong Kong",
+                "tel": "25214668",
+                "fax": "25213738"
+            }
+        ],
+        "website": "http://www.mindnlife.com/",
+        "email": "",
+        "profileImg": ""
+    },
 ]
