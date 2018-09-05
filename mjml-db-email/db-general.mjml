@@ -1,0 +1,116 @@
+<mjml>
+  <mj-head>
+    <mj-title>Help us design a better job search experience!</mj-title>
+    <mj-font name="Muli" href="https://fonts.googleapis.com/css?family=Muli" />
+    <mj-style>
+      @media all and (max-width: 479px) { div[style*="color:#FFFFFD;"] { text-align: center !important; } } @media all and (min-width: 480px) { .desktop-left { text-align: left !important } .desktop-right { text-align: right !important } }
+    </mj-style>
+    <mj-attributes>
+      <mj-button background-color="#ff9000" color="white" font-family="Muli, sans-serif" />
+      <mj-column padding="5px 0 0" />
+      <mj-section padding="0 0 5px" />
+      <mj-text font-family="Muli, sans-serif" font-size="14px" line-height="1.4" padding="5px 10px" />
+      <mj-class name="header" background-color="#0E2B54" padding="0" />
+      <mj-class name="footer" background-color="#0E2B54" color="#FFFFFF" />
+      <mj-class name="footerLast" background-color="#0E2B54" color="#FFFFFF" border-top="1px dotted #ffffff" />
+      <mj-class name="footerText" color="#FFFFFF" font-size="11px" line-height="15px;" />
+      <mj-class name="h1" color="#0f2c55" font-size="24px" line-height="30px" />
+
+    </mj-attributes>
+  </mj-head>
+  <mj-body>
+    <mj-wrapper border-radius="4px" padding="0" border="1px solid #dddddd" background-color="#eeeeee">
+
+
+      <!-- START HEADER -->
+      <mj-section background-color="#0E2B54" padding="10px 0">
+      
+          <mj-column width="55%" padding="0">
+
+            <mj-image width="142px" src="https://hk.jobsdb.com/en-hk/wp-content/uploads/sites/2/static/edm/logo_ftr_blue.png" padding-left="25px" padding-top="0" padding-bottom="0" align="left" href="https://hk.jobsdb.com/hk" alt="jobsDB.com"></mj-image>
+          </mj-column>
+          <mj-column width="45%">
+            <mj-text align="right" font-size="11px"><a href="#" style="color: #ffffff; text-decoration: underline;">View online</a></mj-text>
+          </mj-column>
+      
+      </mj-section>
+      <!-- END HEADER -->
+
+      <!-- START CONTENT -->
+      <mj-section background-color="#ffffff" padding="12px">
+        <mj-column>
+          <mj-text mj-class="h1" padding-bottom="12px" padding-top="12px"><strong>Thank you for joining our candidate community!</strong></mj-text>
+          <mj-text>Dear ${FNAME},</mj-text>
+          <mj-text>This is Ming from jobsDB product team. I am writing to you as you participate in our beta community recruitment last week.</mj-text>
+
+          <mj-text>I would like to thank you for taking the time from a busy day to tell us about yourself as a job seeker. We are keen to learn about your job seeking journey in {specialization} with {expYear} of experience, so that we can create a great product in helping you finding the dream job.</mj-text>
+
+          <mj-text>We are designing a new job search experience for jobsDB and we would like to design that with you. Your participation is a key factor to success.</mj-text>
+
+          <mj-text>We are to setting up a private Facebook group to collect feedback for our work. We will be sharing new designs and we hope to hear opinions from you. All the information we collect will be for internal research purpose and product improvement. That's why we want to keep this a private community so you could share your voice freely in a safe and secure environment.</mj-text>
+          
+          <mj-text font-size="16px" padding-top="12px">
+            Would you like to join our candidate feedback group on Facebook?
+          </mj-text>
+          
+          <mj-group width="60%">
+            <mj-column>
+              <mj-button width="100%">Yes</mj-button>
+            </mj-column>
+            <mj-column>
+              <mj-button width="100%">No</mj-button>
+            </mj-column>
+          </mj-group>
+          
+          
+          <mj-text padding-top="12px">Sincerely,<br />
+            <span style="color:#0e7e8b;">Ming Ho</span><br /> jobsDB Product Design Team
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <!-- END CONTENT -->
+      
+      <!-- START FOOTER -->
+      <mj-section mj-class="footer">
+        <mj-column>
+          <mj-text align="left" color="#FFFFFD"><a href="#"><img width="36" src="http://hk.jobsdb.com/en-hk/wp-content/uploads/sites/2/2015/07/edm-social-icon-facebook.png" /></a>
+            <a href="#"><img width="36" src="https://hk.jobsdb.com/en-hk/wp-content/uploads/sites/2/static/edm/edm-social-icon-ig.png" />
+          </a></mj-text>
+        </mj-column>
+        <mj-column>
+          <mj-text align="right" color="#FFFFFD">
+            <a href="#"><img height="36" src="http://hk.jobsdb.com/en-hk/wp-content/uploads/sites/2/2015/07/badge-appstore.png" /></a>
+            <a href="#"><img height="36" src="http://hk.jobsdb.com/en-hk/wp-content/uploads/sites/2/2015/07/badge-googleplay.png" /></a>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <mj-section background-color="#0E2B54" padding="0">
+        <mj-column padding="0">
+          <mj-divider border-width="1px" border-style="dotted" border-color="lightgrey" />
+
+          <mj-text font-size="11px" color="#ffffff" line-height="15px">
+            <a href="https://hk.jobsdb.com/en-hk/pages/terms/privacy-policy" style="color: #ffffff; text-decoration: underline;" target="_blank">Privacy Statement</a> &nbsp; | &nbsp;
+            <a href="https://hk.jobsdb.com/en-hk/pages/terms/terms-conditions" style="color: #ffffff; text-decoration: underline;" target="_blank">Terms & Condidtions</a>
+          </mj-text>
+
+          <mj-text font-size="11px" color="#ffffff" line-height="15px">
+            You received this e-mail as a result of your registration with jobsDB.com. If you prefer not to receive further promotional news from jobsDB.com or our advertisers, please click <a href="https://hk.jobsdb.com/HK/EN/JobSeeker/UnsubscribeEmails?jid=${GUID}&jpid=1&utm_campaign=c:survey_1807:20180726&utm_source=&utm_medium=email&utm_content=link14_unsubscribe"
+              style="color: #ffffff; text-decoration: underline;" target="_blank">here</a> to unsubscribe.
+          </mj-text>
+
+          <mj-text font-size="11px" color="#ffffff" line-height="15px">
+            Please do not reply to this email. Should you have any enquiry, please contact us via <a href="mailto:CS@jobsDB.com" style="color: #ffffff; text-decoration: underline;">CS@jobsDB.com</a>. Thank you. For further assistance or more information
+            about jobsDB, please contact us at 11/F, Guardian House, 32 Oi Kwan Road, Wan Chai, Hong Kong; Tel: 2332 8832; Email:<a href="mailto:marketing@jobsDB.com" style="color: #ffffff; text-decoration: underline;">marketing@jobsDB.com</a>
+          </mj-text>
+
+          <mj-text font-size="11px" color="#ffffff" line-height="15px" padding-bottom="20px">Copyright © 1998-2018, jobsDB. All rights reserved.</mj-text>
+        </mj-column>
+      </mj-section>
+      <!-- END FOOTER -->
+
+
+
+    </mj-container>
+  </mj-body>
+</mjml>
