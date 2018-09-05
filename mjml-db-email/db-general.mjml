@@ -1,6 +1,6 @@
 <mjml>
   <mj-head>
-    <mj-title>Help us design a better job search experience!</mj-title>
+    <mj-title>Thank you for joining our candidate community!</mj-title>
     <mj-font name="Muli" href="https://fonts.googleapis.com/css?family=Muli" />
     <mj-style>
       @media all and (max-width: 479px) { div[style*="color:#FFFFFD;"] { text-align: center !important; } } @media all and (min-width: 480px) { .desktop-left { text-align: left !important } .desktop-right { text-align: right !important } }
@@ -40,10 +40,10 @@
       <mj-section background-color="#ffffff" padding="12px">
         <mj-column>
           <mj-text mj-class="h1" padding-bottom="12px" padding-top="12px"><strong>Thank you for joining our candidate community!</strong></mj-text>
-          <mj-text>Dear ${FNAME},</mj-text>
+          <mj-text>Dear *|MMERGE10|*,</mj-text>
           <mj-text>This is Ming from jobsDB product team. I am writing to you as you participate in our beta community recruitment last week.</mj-text>
 
-          <mj-text>I would like to thank you for taking the time from a busy day to tell us about yourself as a job seeker. We are keen to learn about your job seeking journey in {specialization} with {expYear} of experience, so that we can create a great product in helping you finding the dream job.</mj-text>
+          <mj-text>I would like to thank you for taking the time from a busy day to tell us about yourself as a job seeker. We are keen to learn about your job seeking journey in *|MMERGE11|* with *|MMERGE12|* experience, so that we can create a great product in helping you finding the dream job.</mj-text>
 
           <mj-text>We are designing a new job search experience for jobsDB and we would like to design that with you. Your participation is a key factor to success.</mj-text>
 
@@ -55,10 +55,10 @@
           
           <mj-group width="60%">
             <mj-column>
-              <mj-button width="100%">Yes</mj-button>
+              <mj-button width="100%" href="https://seekasia-signup.typeform.com/to/WtAmSw?choice=yes&email=*|EMAIL|*&name=*|MMERGE10|*">Yes</mj-button>
             </mj-column>
             <mj-column>
-              <mj-button width="100%">No</mj-button>
+              <mj-button width="100%" href="https://seekasia-signup.typeform.com/to/WtAmSw?choice=no&email=*|EMAIL|*&name=*|MMERGE10|*">No</mj-button>
             </mj-column>
           </mj-group>
           
