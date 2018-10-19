@@ -121,12 +121,26 @@ mixin jobcard(jobad)
 mixin jobcardCompact(jobad)
   .border.border-bottom-0.p-3.list-card(data-target="#"+jobad.Id id='jobcard' + jobad.Id onclick='handleClick(' + jobad.Id + ')')
     .row
-      .col-12.col-lg-9
+      .col-12.col-lg-6
         a(href="#") !{jobad.JobTitle}
-        div(style="font-size:14px") !{jobad.Company}
-      .col-lg-1.d-none.d-lg-block 123
-      .col-lg-1.d-none.d-lg-block abc
-      .col-lg-1.d-none.d-lg-block abc
+        div !{jobad.Company}
+        //- mobile view info
+        .d-lg-none.row
+          .col-8
+            div 
+              i.fas.fa-fw.fa-map-marker-alt.mr-1
+              | !{jobad.Location}
+            div 
+              i.fas.fa-fw.fa-dollar-sign.mr-1
+              | !{jobad.Salary}
+            div !{jobad.PostDate}
+          .col-4.d-flex.align-items-end.justify-content-end
+            if jobad.CompanyLogo
+              img(src=jobad.CompanyLogo)
+      //- desktop list view
+      .col-lg-2.d-none.d-lg-block !{jobad.Location}
+      .col-lg-2.d-none.d-lg-block !{jobad.WorkExperience}
+      .col-lg-2.d-none.d-lg-block !{jobad.PostDate}
 
 
 mixin reqList(header, content)
