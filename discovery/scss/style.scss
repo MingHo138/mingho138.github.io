@@ -14,11 +14,15 @@ $grey-4: #cccccc;
 $grey-2: #666666;
 $grey-6: #f8f8fa;
 $blue-2: #298EB9;
+$link-blue: #298eb9;
 
 @import url('https://fonts.googleapis.com/css?family=Muli');
 
 body {
   font-family: 'Muli';
+}
+a {
+  color: $link-blue;
 }
 
 .bg-input {
@@ -214,3 +218,7 @@ body {
   z-index: 5;
   box-shadow: $grey-4 0 1px 5px;
 }
+
+// typography class
+.text-intimate { font-size: 14px }
+.text-whispering { font-size: 12px }

@@ -25,11 +25,13 @@ html
       .d-flex.container.ml-0.mr-0(style="overflow: hidden; padding: 0")
         //- job listing
         div(style="width:100%; overflow: scroll")
+          //- select variation
+          +jobcardSwitch()
           .joblisting
             .mt-3
               .p-2 1-15 of 58584 jobs
               each jobad in jobdetail
-                +jobcardCompact(jobad)
+                +jobcardCompact(jobad, 1)
             .text-center.pt-3.pb-3
               .btn-group
                 button.btn.btn-secondary Prev

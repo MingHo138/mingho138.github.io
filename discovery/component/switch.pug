@@ -1,0 +1,5 @@
+mixin jobcardSwitch()
+  ul.nav
+    for val in [1,2,3]
+      li.nav-item
+        a.nav-link(href="srp-joblist-var"+val+".html") Version !{val}
