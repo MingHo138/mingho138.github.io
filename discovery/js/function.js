@@ -17,6 +17,11 @@ const handleClick = (jobadId) => {
 
 }
 
+const splitviewToggle = (jobadId) => {
+    console.log("Click on job ad: ", jobadId);
+    $('.joblist-columns').toggle();
+}
+
 const init = () => {
     const initAd = '100003006185288';
     handleClick(initAd);
