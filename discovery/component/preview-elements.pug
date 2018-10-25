@@ -163,35 +163,37 @@ mixin jobcardCompact(jobad, variation=1)
       .col-lg-2.d-none.d-lg-block !{jobad.WorkExperience}
       .col-lg-2.d-none.d-lg-block !{jobad.PostDate}
 
-mixin jobcardCompactDesktop(jobad)
+mixin jobcardCompactDesktop(jobad, variation = 1)
   .border.border-bottom-0.p-2.pl-3.pr-3.list-card(data-target="#"+jobad.Id id='jobcard' + jobad.Id onclick='splitviewToggle(' + jobad.Id + ')')
     .row
       .col-5
         a.font-weight-bold(href="#") !{jobad.JobTitle}
         .text-intimate !{jobad.Company}
 
-        //- ul.mb-1.pl-4.sellingPt.text-intimate
-          li !{jobad.Summary1}
-          li !{jobad.Summary2}
-          li !{jobad.Summary3}
+        //- if variation == 2
+          ul.mb-1.pl-4.sellingPt.text-intimate
+            li !{jobad.Summary1}
+            li !{jobad.Summary2}
+            li !{jobad.Summary3}
 
       //- desktop list view
-      .col-2.text-intimate.joblist-columns
-        if jobad.Location != 'Not Specified'
-          | !{jobad.Location}
-        else
-          | -
-      .col-1.text-intimate.joblist-columns 
-        if jobad.WorkExperience != 'Not Specified' && jobad.WorkExperience != 'N/A'
-          | !{jobad.WorkExperience}
-        else
-          | -
-      .col-2.text-intimate.joblist-columns
-        if jobad.CareerLevel != 'Not Specified' 
-          | !{jobad.CareerLevel}
-        else
-          | -
-      .col-2.text-intimate.joblist-columns !{jobad.PostDate}
+      if variation == 1
+        .col-2.text-intimate.joblist-columns
+          if jobad.Location != 'Not Specified'
+            | !{jobad.Location}
+          else
+            | -
+        .col-1.text-intimate.joblist-columns 
+          if jobad.WorkExperience != 'Not Specified' && jobad.WorkExperience != 'N/A'
+            | !{jobad.WorkExperience}
+          else
+            | -
+        .col-2.text-intimate.joblist-columns
+          if jobad.CareerLevel != 'Not Specified' 
+            | !{jobad.CareerLevel}
+          else
+            | -
+        .col-2.text-intimate.joblist-columns !{jobad.PostDate}
 
 mixin reqList(header, content)
   li.mb-3

@@ -17,6 +17,10 @@ html
     +header("Search Result Page")
   body
     .container
+      +navigation(navItem)
+      //-  search input form
+      +searchInput('compact')
+    .container
       //- job listing
       .joblisting
         .mt-3
@@ -32,7 +36,7 @@ html
 
           //- job cards
           each jobad in jobdetail
-            +jobcardCompactDesktop(jobad)
+            +jobcardCompactDesktop(jobad, 1)
         .text-center.pt-3.pb-3
           .btn-group
             button.btn.btn-secondary Prev
