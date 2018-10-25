@@ -150,7 +150,7 @@ mixin jobcardCompact(jobad, variation=1)
                     span.badge.badge-secondary !{jobad.EmploymentTerm}
                     if jobad.CareerLevel != 'Not Specified'
                       span.badge.badge-secondary.ml-1 !{jobad.CareerLevel}
-                    if jobad.WorkExperience != 'Not Specified'
+                    if jobad.WorkExperience != 'Not Specified' && jobad.WorkExperience != 'N/A'
                       span.badge.badge-secondary.ml-1 !{jobad.WorkExperience}
             if variation != 2
               .text-whispering.mt-1 !{jobad.PostDate}
