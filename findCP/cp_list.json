@@ -481,7 +481,7 @@
         "practice": [
             {
                 "name": "Pacificare",
-                "area": "Hong Kong",
+                "area": "Kowloon",
                 "district": "Tsim Sha Tsui",
                 "address": "12/F, 26 Nathan Road, Tsimshatsui, Kowloon, Hong Kong",
                 "tel": "23661888",
@@ -516,4 +516,78 @@
         "email": "",
         "profileImg": ""
     },
+    {
+        "enFirstName": "Shuk Mui",
+        "enLastName": "Chiu",
+        "enNickName": "Beth",
+        "chFirstName": "淑梅",
+        "chLastName": "趙",
+        "doctor": false,
+        "language": ["cantonese", "putonghua", "english"],
+        "clientele": ["child", "adolescent", "adult", "older adults"],
+        "serviceArea": ["assessment", "treatment", "consultation"],
+        "practice": [
+            {
+                "name": "MindNected Development Centre Limited",
+                "area": "Kowloon",
+                "district": "Kowloon Bay",
+                "address": "35D YHC Tower, 1 Sheung Yuet Road, Kowloon, Hong Kong",
+                "tel": ["26285218","55986826"],
+                "fax": "2628 5848"
+            }
+        ],
+        "website": "",
+        "email": "",
+        "profileImg": ""
+    },
+    {
+        "enFirstName": "Hoi Sze",
+        "enLastName": "Chow",
+        "enNickName": "Daisy",
+        "chFirstName": "凱詩",
+        "chLastName": "鄒",
+        "doctor": false,
+        "language": ["cantonese", "putonghua", "english"],
+        "clientele": ["child", "adolescent", "adult", "child", "older adults"],
+        "serviceArea": ["assessment", "treatment", "consultation"],
+        "serviceAreadAdditional": ["training"],
+        "practice": [
+            {
+                "name": "CHEERS Psychological Consultancy Services",
+                "area": "Kowloon",
+                "district": "Tsim Sha Tsui",
+                "address": "Flat 8D, Milton Mansion, 96 Nathan Road, Tsim Sha Tsui, Hong Kong",
+                "tel": "25372628",
+                "fax": "25372628"
+            }
+        ],
+        "website": "http://www.cheerspsy.com/",
+        "email": "",
+        "profileImg": "http://www.cheerspsy.com/images/profilePicture.jpg"
+    },
+    {
+        "enFirstName": "",
+        "enLastName": "",
+        "enNickName": "",
+        "chFirstName": "",
+        "chLastName": "",
+        "doctor": false,
+        "language": [],
+        "clientele": [],
+        "serviceArea": [],
+        "practice": [
+            {
+                "name": "",
+                "area": "",
+                "district": "",
+                "address": "",
+                "tel": "",
+                "fax": ""
+            }
+        ],
+        "website": "",
+        "email": "",
+        "profileImg": ""
+    },
+    
 ]
