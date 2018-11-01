@@ -2,6 +2,9 @@
 body {
   font-family: 'Muli'; }
 
+a {
+  color: #298eb9; }
+
 .bg-input {
   background: #0E2956; }
 
@@ -9,7 +12,6 @@ body {
   background-color: #EEEEEE; }
 
 .joblisting {
-  background: #EEEEEE;
   margin-top: -15px; }
 
 .list-card {
@@ -197,3 +199,16 @@ body {
   z-index: 5;
   -webkit-box-shadow: #cccccc 0 1px 5px;
   box-shadow: #cccccc 0 1px 5px; }
+
+.joblist-col-header {
+  background: #f8f8fa;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2; }
+
+.text-intimate {
+  font-size: 14px; }
+
+.text-whispering {
+  font-size: 12px; }

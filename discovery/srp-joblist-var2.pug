@@ -1,0 +1,48 @@
+include component/header.pug
+include component/jobdetail.pug
+include component/intercom.pug
+include component/hotjar.pug
+include component/logo-jobsdb.pug
+include component/preview-elements.pug
+include component/switch.pug
+include data/jobdetail.pug
+
+- var expireDate = Math.floor(Math.random()*30 + 1)
+- var postTime = Math.floor(Math.random()*60 + 1)
+- var navItem = ['My jobsDB', 'Resources', 'Career Insights']
+
+//- SRP page starts here
+html
+  head
+    +header("Search Result Page")
+  body
+    .d-flex.flex-column(style="max-height: 100vh;")
+      //- header
+      //- .container
+      //-   +navigation(navItem)
+      //-   search input form
+      //-   +searchInput('compact')
+      .d-flex.container.ml-0.mr-0(style="overflow: hidden; padding: 0")
+        //- job listing
+        div(style="width:100%; overflow: scroll")
+          //- select variation
+          +jobcardSwitch()
+          .joblisting
+            .mt-3
+              .p-2 1-15 of 58584 jobs
+              each jobad in jobdetail
+                +jobcardCompact(jobad, 2)
+            .text-center.pt-3.pb-3
+              .btn-group
+                button.btn.btn-secondary Prev
+                button.btn.btn-secondary 1
+                button.btn.btn-secondary Next
+            //- footer
+            +footer()       
+
+        .bottomNav.d-block.d-sm-none
+          .row
+            .col.text-center
+              i.fa.fa-search(style="position:relative; top: 20px;" onclick="Intercom('boot')")
+            .col.text-center
+              i.fa.fa-bars(style="position:relative; top: 20px;" onclick="Intercom('shutdown')")

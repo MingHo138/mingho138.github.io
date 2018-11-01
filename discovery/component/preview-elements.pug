@@ -38,7 +38,7 @@ mixin preview(jobad, layout)
                 button.btn.btn-primary.btn-block Apply
               .text-center(style="width: 50px;")
                 i.btn-bookmark.fa.fa-2x.fa-bookmark.position-relative(style="right: -5px;" onclick="toggleBookmark(event)")
-    .mb-3.d-md-none
+    //- .mb-3.d-md-none
       .row
         .col
           a.btn.btn-block.btn-secondary(href="#jobdesc") Job Description
@@ -117,6 +117,83 @@ mixin jobcard(jobad)
     .mt-2 !{jobad.PostDate}
     if jobad.CompanyLogo
       img.logo(src=jobad.CompanyLogo)
+
+mixin jobcardCompact(jobad, variation=1)
+  .border.border-bottom-0.p-2.pl-3.pr-3.list-card(data-target="#"+jobad.Id id='jobcard' + jobad.Id onclick='handleClick(' + jobad.Id + ')')
+    .row
+      .col-12.col-lg-6
+        a.font-weight-bold(href="#") !{jobad.JobTitle}
+        .text-intimate !{jobad.Company}
+
+        if variation == 1
+          ul.mb-1.pl-4.sellingPt.text-intimate
+            li !{jobad.Summary1}
+            li !{jobad.Summary2}
+            li !{jobad.Summary3}
+
+        //- mobile view info
+        .d-lg-none.row
+          .col-8
+            if variation == 3 | variation == 1
+              div.extraInfo
+                .text-intimate
+                  i.fas.fa-fw.fa-map-marker-alt.mr-1
+                  | !{jobad.Location}
+                if jobad.Salary != "Salary provided" && jobad.Salary != "Salary negotiable"
+                  .text-intimate 
+                    i.fas.fa-fw.fa-dollar-sign.mr-1
+                    | !{jobad.Salary}
+
+                //- mobile badge info
+                if variation == 3
+                  div.badgeInfo.pt-1.pb-1
+                    span.badge.badge-secondary !{jobad.EmploymentTerm}
+                    if jobad.CareerLevel != 'Not Specified'
+                      span.badge.badge-secondary.ml-1 !{jobad.CareerLevel}
+                    if jobad.WorkExperience != 'Not Specified' && jobad.WorkExperience != 'N/A'
+                      span.badge.badge-secondary.ml-1 !{jobad.WorkExperience}
+            if variation != 2
+              .text-whispering.mt-1 !{jobad.PostDate}
+          if jobad.CompanyLogo && variation == 1 | variation == 3
+            .col-4.d-flex.align-items-end.justify-content-end
+              img(src=jobad.CompanyLogo style="max-width: 150px; max-height: 60px;")
+      
+      //- desktop list view
+      .col-lg-2.d-none.d-lg-block !{jobad.Location}
+      .col-lg-2.d-none.d-lg-block !{jobad.WorkExperience}
+      .col-lg-2.d-none.d-lg-block !{jobad.PostDate}
+
+mixin jobcardCompactDesktop(jobad, variation = 1)
+  .border.border-bottom-0.p-2.pl-3.pr-3.list-card(data-target="#"+jobad.Id id='jobcard' + jobad.Id onclick='splitviewToggle(' + jobad.Id + ')')
+    .row
+      .col-5
+        a.font-weight-bold(href="#") !{jobad.JobTitle}
+        .text-intimate !{jobad.Company}
+
+        //- if variation == 2
+          ul.mb-1.pl-4.sellingPt.text-intimate
+            li !{jobad.Summary1}
+            li !{jobad.Summary2}
+            li !{jobad.Summary3}
+
+      //- desktop list view
+      if variation == 1
+        .col-2.text-intimate.joblist-columns
+          if jobad.Location != 'Not Specified'
+            | !{jobad.Location}
+          else
+            | -
+        .col-1.text-intimate.joblist-columns 
+          if jobad.WorkExperience != 'Not Specified' && jobad.WorkExperience != 'N/A'
+            | !{jobad.WorkExperience}
+          else
+            | -
+        .col-2.text-intimate.joblist-columns
+          if jobad.CareerLevel != 'Not Specified' 
+            | !{jobad.CareerLevel}
+          else
+            | -
+        .col-2.text-intimate.joblist-columns !{jobad.PostDate}
 
 mixin reqList(header, content)
   li.mb-3
