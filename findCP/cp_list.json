@@ -566,6 +566,46 @@
         "profileImg": "http://www.cheerspsy.com/images/profilePicture.jpg"
     },
     {
+        "enFirstName": "Ka Lai",
+        "enLastName": "Chu",
+        "enNickName": "",
+        "chFirstName": "嘉麗",
+        "chLastName": "朱",
+        "doctor": false,
+        "language": ["cantonese", "english"],
+        "clientele": ["child"],
+        "serviceArea": ["assessment", "consultation"],
+        "practice": [
+            {
+                "name": "STEP Center for Child Development",
+                "area": "Hong Kong",
+                "district": "Wan Chai",
+                "address": "43-59 Queen’s Road East, Hong Kong",
+                "tel": "28992993",
+                "fax": "28992262"
+            },
+            {
+                "name": "STEP Center for Assessment and Treatment",
+                "area": "New Territories",
+                "district": "Yuen Long",
+                "address": "99-109 Castle Peak Road, Yuen Long",
+                "tel": "31010525",
+                "fax": "35830525"
+            },
+            {
+                "name": "Hong Kong Intelligence and Learning Assessment Centre",
+                "area": "Kowloon",
+                "district": "Yau Ma Tei",
+                "address": "Rm 2A&D, Nathan Commercial Bldg, 430 Nathan Road, Yau Ma Tei, Kowloon",
+                "tel": "37554987",
+                "fax": "37554986"
+            }
+        ],
+        "website": "http://www.step-hk.com",
+        "email": "info@step-hk.com",
+        "profileImg": "http://www.step-hk.com/2010/image/teacher/jonne.jpg"
+    },
+    {
         "enFirstName": "",
         "enLastName": "",
         "enNickName": "",
@@ -589,5 +629,4 @@
         "email": "",
         "profileImg": ""
     },
-    
 ]
