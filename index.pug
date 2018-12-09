@@ -40,3 +40,15 @@ html
                     a(href="#") Salary Trend
                 li
                     a(href=hkmap) Hong Kong Map
+            
+            h3 Tracking Test
+            button(onclick="doStuff()") Do something
+        script.
+            function doStuff() {
+            //- alert('hi')
+            ga('send', 'event', {
+            eventCategory: 'search',
+            eventAction: 'keyword',
+            eventLabel: "manager"
+            });
+            }
