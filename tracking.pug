@@ -1,0 +1,14 @@
+mixin analytics()
+    // async load google tag manager and analytics
+    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-130573774-1')
+    script(async='', src='https://www.google-analytics.com/analytics.js')
+    // Global site tag (gtag.js) - Google Analytics
+    script.
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-130573774-1');
+    // Google analytics
+    script.
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        ga('create', 'UA-130573774-1', 'auto');
+        ga('send', 'pageview');

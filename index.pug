@@ -1,3 +1,5 @@
+include tracking.pug
+
 - var n = 0
 - var hkmap = "https://mingho138.github.io/map/index.html"
 
@@ -7,20 +9,7 @@
 
 html
     head
-        // async load google tag manager and analytics
-        script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-130573774-1')
-        script(async='', src='https://www.google-analytics.com/analytics.js')
-        // Global site tag (gtag.js) - Google Analytics
-        script.
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-130573774-1');
-        // Google analytics
-        script.
-            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-            ga('create', 'UA-130573774-1', 'auto');
-            ga('send', 'pageview');
-
+        +analytics()
         link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
         meta(name="viewport" content="width=device-width, initial-scale=1")
         title Ming's Github Playground

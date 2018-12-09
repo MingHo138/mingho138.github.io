@@ -6,6 +6,7 @@ include component/logo-jobsdb.pug
 include component/preview-elements.pug
 include component/switch.pug
 include data/jobdetail.pug
+include ../tracking.pug
 
 - var expireDate = Math.floor(Math.random()*30 + 1)
 - var postTime = Math.floor(Math.random()*60 + 1)
@@ -14,6 +15,7 @@ include data/jobdetail.pug
 //- SRP page starts here
 html
   head
+    +analytics()
     +header("Search Result Page")
   body
     .d-flex.flex-column(style="max-height: 100vh;")
